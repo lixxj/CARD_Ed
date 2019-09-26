@@ -1,6 +1,5 @@
-# Computer Architecture and Design (2019-2020)[SEM1] (2019-20)
 ## the University of Edinburgh
-
+# Computer Architecture and Design (2019-2020)[SEM1] (2019-20)
 
 ### Practicals
 
@@ -13,12 +12,12 @@ Each practical looks at a specific aspect of the course, and is capable of being
 
 When you have finished each practical you must ask your lab demonstrator to record that fact, then you may proceed to the next practical. That way you can control your own time organisation. Information about using the Xilinx FPGA board and Verilog is contained in manuals placed in the laboratory. Formative feedback is provided by laborary demonstrators during laboratory sessions. They are there to help you understand the task, and may give hints regarding the solution, but you are expected to define your own solutions and write your own Verilog descriptions. Practicals 1, 2 and 3 are also assessed summatively. This takes the form of a mark for each practical that together contribute 40% of the overall course mark.
 
-Practical Marking
+### Practical Marking
 
 Each practical is worth a number of marks, contributing to the overall course practical mark. Practical 1 is worth 30%, practical 2 is worth 35%, and practical 3 is worth 35% of the course practical marks. Therefore P1 contributes 12% of the overall course mark, whereas P2 and P3 each contribute 14% of the overall course mark.
 
 Marking is based on showing the completed designs to a lab demonstrator and, for practicals 2 and 3, discussing the implemented designs in a report. If there is a report, there are more marks for the report than for merely demonstrating the completed design. The practical handouts contain guidance as to contents of each individual report.
 
-Practical Feedback
+### Practical Feedback
 
 Direct feedback on your performance in this course will be provided primarily via the summative assessment of laboratory practical exercises. Marks and feedback on reports will be returned for each practical within 2 weeks of the submission deadline. Formative assessment of the lab exercises will be provided during laboratory sessions and tutorials. This will generally take the form of verbal feedback from the laboratory teaching staff on the quality of your designs and how you could improve them. 
