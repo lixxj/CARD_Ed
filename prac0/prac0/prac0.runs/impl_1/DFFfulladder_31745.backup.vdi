@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Sep 26 18:07:34 2019
+# Process ID: 31745
+# Current directory: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac0/prac0/prac0.runs/impl_1
+# Command line: vivado -log DFFfulladder.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DFFfulladder.tcl -notrace
+# Log file: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac0/prac0/prac0.runs/impl_1/DFFfulladder.vdi
+# Journal file: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac0/prac0/prac0.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source DFFfulladder.tcl -notrace
+
+*** Halting run - EA reset detected ***
+
+
+
+    while executing
+"start_step init_design"
+    (file "DFFfulladder.tcl" line 64)
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 26 18:07:40 2019...

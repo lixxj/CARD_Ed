@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Sep 26 16:32:58 2019
-# Process ID: 13701
+# Start of session at: Thu Sep 26 18:18:46 2019
+# Process ID: 3123
 # Current directory: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac0/prac0/prac0.runs/synth_1
-# Command line: vivado -log fulladder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fulladder.tcl
-# Log file: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac0/prac0/prac0.runs/synth_1/fulladder.vds
+# Command line: vivado -log DFFfulladder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DFFfulladder.tcl
+# Log file: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac0/prac0/prac0.runs/synth_1/DFFfulladder.vds
 # Journal file: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac0/prac0/prac0.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source fulladder.tcl -notrace
+source DFFfulladder.tcl -notrace
