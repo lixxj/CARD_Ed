@@ -4,8 +4,8 @@
 
 ### Practicals
 
-![alt text](https://www.learn.ed.ac.uk/bbcswebdav/pid-4047604-dt-content-rid-9249508_1/xid-9249508_1)
-![alt text](https://www.learn.ed.ac.uk/bbcswebdav/pid-4047604-dt-content-rid-9469049_1/xid-9469049_1)
+![alt text](https://upload.wikimedia.org/wikipedia/en/thumb/0/00/XilinxVivado_Logo.jpg/393px-XilinxVivado_Logo.jpg)
+![alt text](https://c1.neweggimages.com/ProductImage/13-457-001-V04.jpg)
 
 The coursework for Computer Architecture and Design consists of three FPGA-based exercises that take place in weekly three-hour laboratory sessions, plus a final practical based on a CPU simulator. The FPGA-based practicals are carried out in the level-3 laboratory in Appleton Tower, under the supervision of the lecturer and/or a lab demonstrator/tutor. Practical 0 is a non-assessed tutorial to introduce you to the Xilinx design software used to program the FPGAs. P0 begins with a very simple design to take you through all the stages of implementing logic in FPGAs. Along the way you will be introduced to the hardware description language, Verilog, and to the process of simulating a logic design described in Verilog. The first assessed practical (Practical 1) will involve the design and implementation of a key component within a RISC-V CPU. The second practical (Practical 2) is designed to illustrate how the performance of a pipelined CPU can be improved through microarchitectural enhancements (which you will design). The third practical (Practical 3) operates at a higher level, and is based on a full-system simulator. 
 
