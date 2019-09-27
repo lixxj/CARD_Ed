@@ -14,25 +14,23 @@ module DFFfulladder(
     input clock,
     input reset
     );
-    
-    //reg sm, co;
+    wire sm, co;
+    assign sm = (bit0 ^ bit1) ^ carry_in;
+    assign co = (bit0 & bit1) | (carry_in & (bit0 ^ bit1));
     
 always @(posedge clock or posedge reset)
 begin
-    if (reset == 1'b0)
+    if (reset == 1'b1)
         begin
             sum <= 1'b0;
             carry_out <= 1'b0;
         end // if
     else
         begin
-            sum <= (bit0 ^ bit1) ^ carry_in;
-            carry_out <= (bit0 & bit1) | (carry_in & (bit0 ^ bit1));
+            sum <= sm;
+            carry_out <= co;
         end // else
 end // always
-
-//assign sum = sm;
-//assign carry_out = co; 
 
 endmodule // fulladder
 

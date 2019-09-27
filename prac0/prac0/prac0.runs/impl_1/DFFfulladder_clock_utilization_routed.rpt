@@ -1,13 +1,13 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Thu Sep 26 18:19:54 2019
-| Host         : epoch.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
+| Date         : Fri Sep 27 16:47:54 2019
+| Host         : link.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
 | Command      : report_clock_utilization -file DFFfulladder_clock_utilization_routed.rpt
 | Design       : DFFfulladder
 | Device       : 7z020-clg400
 | Speed File   : -1  PRODUCTION 1.11 2014-09-11
--------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 
 Clock Utilization Report
 

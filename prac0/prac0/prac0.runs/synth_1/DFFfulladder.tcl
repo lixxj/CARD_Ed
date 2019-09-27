@@ -27,6 +27,7 @@ set_property webtalk.parent_dir /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Cour
 set_property parent.project_path /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac0/prac0/prac0.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property board_part_repo_paths {/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/repo/board_files} [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
 set_property ip_output_repo /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac0/prac0/prac0.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

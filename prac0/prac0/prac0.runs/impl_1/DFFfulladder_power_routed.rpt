@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Thu Sep 26 18:19:54 2019
-| Host             : epoch.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
+| Date             : Fri Sep 27 16:47:54 2019
+| Host             : link.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
 | Command          : report_power -file DFFfulladder_power_routed.rpt -pb DFFfulladder_power_summary_routed.pb -rpx DFFfulladder_power_routed.rpx
 | Design           : DFFfulladder
 | Device           : xc7z020clg400-1
@@ -52,12 +52,12 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.014 |        7 |       --- |             --- |
-|   LUT as Logic |     0.007 |        2 |     53200 |           <0.01 |
+| Slice Logic    |     0.014 |        6 |       --- |             --- |
+|   LUT as Logic |     0.007 |        1 |     53200 |           <0.01 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Register     |     0.001 |        2 |    106400 |           <0.01 |
 |   Others       |     0.000 |        1 |       --- |             --- |
-| Signals        |     0.055 |        9 |       --- |             --- |
+| Signals        |     0.055 |        8 |       --- |             --- |
 | I/O            |     2.669 |        7 |       125 |            5.60 |
 | Static Power   |     0.178 |          |           |                 |
 | Total          |     2.915 |          |           |                 |
