@@ -1,4 +1,9 @@
+// Completed by XJ
+// Xingjian(XJ) Li, s2003300
+// Sep/Oct 2019
+
 `timescale 1ns / 1ps
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 // Description:    Integer ALU for RISC-V core (RV32I version)
@@ -36,7 +41,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 module alu(
-  input       [3:0]     exe_alu_opc_r,  // ALU opcode (see lines 21:30 below)
+  input       [3:0]     exe_alu_opc_r,  // ALU opcode 
   input                 exe_sel_pc_r,   // Choose between PC (1) or reg1 (0)
   input       [31:0]    exe_pc_r,       // PC at the EXE stage
   input       [31:0]    exe_reg1_r,     // reg1 at the EXE stage
@@ -44,17 +49,22 @@ module alu(
   output  reg [31:0]    alu_result      // ALU result output
 );
 
-localparam [3:0]  ALU_OPC_AND  = 4'b0111, // bitwise AND
+localparam [3:0]  // logical
+                  ALU_OPC_AND  = 4'b0111, // bitwise AND
                   ALU_OPC_OR   = 4'b0110, // bitwise OR
                   ALU_OPC_XOR  = 4'b0100, // bitwise XOR
+                  // Additive
                   ALU_OPC_ADD  = 4'b0000, // 2's complement addition
                   ALU_OPC_SUB  = 4'b1000, // 2's complement subtraction
+                  // Set
                   ALU_OPC_SLT  = 4'b0010, // set if less than (signed)
                   ALU_OPC_SLTU = 4'b0011, // set if less than (unsigned)
+                  // Shift
                   ALU_OPC_SLL  = 4'b0001, // shift-left logical
                   ALU_OPC_SRL  = 4'b0101, // shift-right logical
                   ALU_OPC_SRA  = 4'b1101; // shift-right arithmetic
 
-// Implement your logic here...
+// Implementation
+
 
 endmodule

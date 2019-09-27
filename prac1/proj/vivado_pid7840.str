@@ -1,0 +1,353 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 7840
+License: Customer
+
+Current time: 	Fri Sep 27 15:46:18 BST 2019
+Time zone: 	Greenwich Mean Time (GB)
+
+OS: Scientific Linux release 7.6 (Nitrogen)
+OS Version: 3.10.0-1062.1.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 6
+
+Display: :0
+Screen size: 1920x1200
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 20 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/tps/lnx64/jre9.0.4
+Java executable location: 	/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	s2003300
+User home directory: /afs/inf.ed.ac.uk/user/s20/s2003300
+User working directory: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj
+User country: 	GB
+User language: 	en
+User locale: 	en_GB
+
+RDI_BASEROOT: /afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado
+HDI_APPROOT: /disk/scratch/Xilinx/Vivado/2018.3
+RDI_DATADIR: /afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/data
+RDI_BINDIR: /afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/bin
+
+Vivado preferences file location: /afs/inf.ed.ac.uk/user/s20/s2003300/.Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: /afs/inf.ed.ac.uk/user/s20/s2003300/.Xilinx/Vivado/2018.3/
+Vivado layouts directory: /afs/inf.ed.ac.uk/user/s20/s2003300/.Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/vivado.log
+Vivado journal file location: 	/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-7840-link.inf.ed.ac.uk
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /disk/scratch/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@xilinx-lm.inf.ed.ac.uk
+XILINX_DSP: /disk/scratch/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: /disk/scratch/Xilinx/Vivado/2018.3
+XILINX_SDK: /disk/scratch/Xilinx/SDK/2018.3
+XILINX_VIVADO: /disk/scratch/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: /disk/scratch/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	206 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 5,011 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,015 MB. GUI used memory: 45 MB. Current time: 9/27/19, 3:46:20 PM BST
+unMinimizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 78, 6); // dr (af, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 69, 62); // dr (af, cp)
+// Elapsed time: 25 seconds
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // af (al, cp)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source create_project.tcl"); // aC (Z, cp)
+// Tcl Command: 'source create_project.tcl'
+// Tcl Command: 'source create_project.tcl'
+// bx (cp):  Tcl Command Line : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: source create_project.tcl 
+// Tcl Message: # set proj_name "CARD_P1" # if {[info exists ::create_path]} { # 	set dest_dir $::create_path # } else { # 	set dest_dir [file normalize [file dirname [info script]]] # } # puts "INFO: Creating new project in $dest_dir" 
+// Tcl Message: INFO: Creating new project in /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj 
+// Tcl Message: # cd $dest_dir # set part "xc7z020clg400-1" # set brd_part "tul.com.tw:pynq-z2:part0:1.0" # set origin_dir ".." # set orig_proj_dir "[file normalize "$origin_dir/proj"]" # set src_dir $origin_dir/src # set repo_dir $origin_dir/repo # set_param board.repoPaths "[file normalize "$repo_dir/board_files"]" # create_project -force $proj_name $dest_dir 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,095 MB. GUI used memory: 48 MB. Current time: 9/27/19, 3:47:10 PM BST
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/disk/scratch/Xilinx/Vivado/2018.3/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 95 MB (+97468kb) [00:01:03]
+// [Engine Memory]: 5,151 MB (+5249645kb) [00:01:03]
+// WARNING: HEventQueue.dispatchEvent() is taking  2302 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PART_MODIFIED
+// TclEventType: BOARD_MODIFIED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:12 . Memory (MB): peak = 6648.598 ; gain = 152.332 ; free physical = 5881 ; free virtual = 20259 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: # add_files -quiet $src_dir/hdl # add_files -quiet [glob -nocomplain ../src/ip/*.xci] 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 112 MB (+11980kb) [00:01:09]
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: Project created:CARD_P1 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+dismissDialog("Tcl Command Line"); // bx (cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 5,214 MB. GUI used memory: 55 MB. Current time: 9/27/19, 3:47:25 PM BST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 40 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 5); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, alu (alu.v)]", 2, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, alu (alu.v)]", 2, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("alu.v", 114, 518); // cl (w, cp)
+// Elapsed time: 115 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (Q, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cp):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File '/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' 
+// Tcl Message: INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'... 
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' 
+// Tcl Message: xvlog --incr --relax -prj tb_vlog.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '4' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' 
+// Tcl Message: Vivado Simulator 2018.3 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved. Running: /disk/scratch/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 82a06af6ecb549dd893ccff59be7b463 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log  Using 8 slave threads. Starting static elaboration 
+// Tcl Message: Completed static elaboration Starting simulation data flow analysis Completed simulation data flow analysis Time Resolution for simulation is 1ps Compiling module xil_defaultlib.alu Compiling module unisims_ver.OBUF Compiling module unisims_ver.LUT6 Compiling module unisims_ver.LUT5 Compiling module unisims_ver.CARRY4 Compiling module unisims_ver.LUT4 Compiling module unisims_ver.x_lut2_mux4 Compiling module unisims_ver.LUT2 Compiling module unisims_ver.x_lut3_mux8 Compiling module unisims_ver.LUT3 Compiling module unisims_ver.IBUF Compiling module xil_defaultlib.rv32im_alu_0_alu Compiling module xil_defaultlib.rv32im_alu_0 Compiling module xil_defaultlib.tb Compiling module xil_defaultlib.glbl 
+// Tcl Message: Built simulation snapshot tb_behav 
+// Tcl Message:  ****** Webtalk v2018.3 (64-bit)   **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-186] '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Sep 27 15:50:47 2019. For additional details about this file, please refer to the WebTalk help file at /disk/scratch/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html. INFO: [Common 17-206] Exiting Webtalk at Fri Sep 27 15:50:47 2019... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 6755.594 ; gain = 0.000 ; free physical = 5619 ; free virtual = 20206 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.3 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Elapsed time: 22 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Waveform: addNotify
+// Tcl Message: open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,333 MB. GUI used memory: 64 MB. Current time: 9/27/19, 3:50:50 PM BST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 100us 
+// Tcl Message:  Error: no operations are enabled! You must enable at least one group of operations in tb.v, on lines 50-53.  $finish called at time : 0 fs : File "/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v" Line 159 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 100us 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 6838.195 ; gain = 82.605 ; free physical = 5541 ; free virtual = 20145 
+// [GUI Memory]: 121 MB (+3793kb) [00:04:39]
+// 'd' command handler elapsed time: 24 seconds
+dismissDialog("Run Simulation"); // e (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 26 seconds
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aI (aF, cp)
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+// Elapsed time: 230 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.v", 2); // k (j, cp)
+// Elapsed time: 122 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aF, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("alu.v", 215, 118); // cl (w, cp)
+selectCodeEditor("alu.v", 752, 118); // cl (w, cp)
+// Elapsed time: 58 seconds
+selectCodeEditor("alu.v", 400, 777); // cl (w, cp)
+// Elapsed time: 109 seconds
+selectCodeEditor("alu.v", 333, 482); // cl (w, cp)
+selectCodeEditor("alu.v", 819, 395); // cl (w, cp)
+selectCodeEditor("alu.v", 178, 552); // cl (w, cp)
+selectCodeEditor("alu.v", 400, 545); // cl (w, cp)
+selectCodeEditor("alu.v", 290, 546); // cl (w, cp)
+selectCodeEditor("alu.v", 378, 397); // cl (w, cp)
+selectCodeEditor("alu.v", 355, 543); // cl (w, cp)
+selectCodeEditor("alu.v", 596, 536); // cl (w, cp)
+selectCodeEditor("alu.v", 603, 561); // cl (w, cp)
+selectCodeEditor("alu.v", 607, 575); // cl (w, cp)
+selectCodeEditor("alu.v", 714, 602); // cl (w, cp)
+// Elapsed time: 30 seconds
+selectCodeEditor("alu.v", 764, 469); // cl (w, cp)
+selectCodeEditor("alu.v", 699, 447); // cl (w, cp)
+selectCodeEditor("alu.v", 647, 476); // cl (w, cp)
+// Elapsed time: 42 seconds
+selectCodeEditor("alu.v", 751, 219); // cl (w, cp)
+selectCodeEditor("alu.v", 639, 246); // cl (w, cp)
+selectCodeEditor("alu.v", 614, 262); // cl (w, cp)
+selectCodeEditor("alu.v", 559, 288); // cl (w, cp)
+selectCodeEditor("alu.v", 558, 266); // cl (w, cp)
+selectCodeEditor("alu.v", 559, 256); // cl (w, cp)
+selectCodeEditor("alu.v", 717, 262); // cl (w, cp)
+// Elapsed time: 78 seconds
+selectCodeEditor("alu.v", 581, 583); // cl (w, cp)
+selectCodeEditor("alu.v", 179, 539); // cl (w, cp)
+selectCodeEditor("alu.v", 207, 541); // cl (w, cp)
+selectCodeEditor("alu.v", 61, 566); // cl (w, cp)
+selectCodeEditor("alu.v", 354, 538); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("alu.v", 333, 580); // cl (w, cp)
+selectCodeEditor("alu.v", 177, 620); // cl (w, cp)
+selectCodeEditor("alu.v", 266, 612); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("alu.v", 178, 675); // cl (w, cp)
+selectCodeEditor("alu.v", 282, 677); // cl (w, cp)
+selectCodeEditor("alu.v", 224, 616); // cl (w, cp)
+selectCodeEditor("alu.v", 293, 673); // cl (w, cp)
+selectCodeEditor("alu.v", 181, 730); // cl (w, cp)
+selectCodeEditor("alu.v", 245, 726); // cl (w, cp)
+selectCodeEditor("alu.v", 651, 735); // cl (w, cp)
+selectCodeEditor("alu.v", 782, 704); // cl (w, cp)
+selectCodeEditor("alu.v", 664, 624); // cl (w, cp)
+selectCodeEditor("alu.v", 526, 742); // cl (w, cp)
+selectCodeEditor("alu.v", 488, 192); // cl (w, cp)
+selectCodeEditor("alu.v", 826, 193); // cl (w, cp)
+selectCodeEditor("alu.v", 833, 183); // cl (w, cp)
+// Elapsed time: 16 seconds
+selectCodeEditor("alu.v", 211, 8); // cl (w, cp)
+selectCodeEditor("alu.v", 3, 7); // cl (w, cp)
+// Elapsed time: 24 seconds
+selectCodeEditor("alu.v", 250, 6); // cl (w, cp)
+selectCodeEditor("alu.v", 236, 32); // cl (w, cp)
+// Elapsed time: 15 seconds
+selectCodeEditor("alu.v", 60, 90); // cl (w, cp)
+selectCodeEditor("alu.v", 332, 31); // cl (w, cp)
+// Elapsed time: 20 seconds
+selectCodeEditor("alu.v", 251, 86); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("alu.v", 546, 317); // cl (w, cp)
+selectCodeEditor("alu.v", 729, 364); // cl (w, cp)
+selectCodeEditor("alu.v", 713, 357); // cl (w, cp)
+selectCodeEditor("alu.v", 313, 756); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("alu.v", 19, 11); // cl (w, cp)
+selectCodeEditor("alu.v", 412, 203); // cl (w, cp)
+selectCodeEditor("alu.v", 590, 137); // cl (w, cp)
+selectCodeEditor("alu.v", 237, 100); // cl (w, cp)
+selectCodeEditor("alu.v", 262, 82); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,369 MB. GUI used memory: 64 MB. Current time: 9/27/19, 4:07:56 PM BST
+// Elapsed time: 10 seconds
+selectCodeEditor("alu.v", 42, 797); // cl (w, cp)
+selectCodeEditor("alu.v", 55, 778); // cl (w, cp)
+selectCodeEditor("alu.v", 603, 505); // cl (w, cp)
+selectCodeEditor("alu.v", 526, 594); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("alu.v", 144, 217); // cl (w, cp)
+selectCodeEditor("alu.v", 843, 225); // cl (w, cp)
+selectCodeEditor("alu.v", 819, 247); // cl (w, cp)
+selectCodeEditor("alu.v", 796, 235); // cl (w, cp)
+selectCodeEditor("alu.v", 783, 259); // cl (w, cp)
+selectCodeEditor("alu.v", 818, 279); // cl (w, cp)
+// Elapsed time: 93 seconds
+selectCodeEditor("alu.v", 721, 555); // cl (w, cp)
+selectCodeEditor("alu.v", 733, 571); // cl (w, cp)
+selectCodeEditor("alu.v", 698, 600); // cl (w, cp)
+selectCodeEditor("alu.v", 712, 620); // cl (w, cp)
+selectCodeEditor("alu.v", 765, 632); // cl (w, cp)
+selectCodeEditor("alu.v", 765, 632); // cl (w, cp)
+selectCodeEditor("alu.v", 769, 614); // cl (w, cp)
+// Elapsed time: 208 seconds
+selectCodeEditor("alu.v", 253, 768); // cl (w, cp)
