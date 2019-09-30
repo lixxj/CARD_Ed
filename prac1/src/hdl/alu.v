@@ -60,11 +60,14 @@ localparam [3:0]  // logical
                   ALU_OPC_SLT  = 4'b0010, // set if less than (signed)
                   ALU_OPC_SLTU = 4'b0011, // set if less than (unsigned)
                   // Shift
+                  // The shift amount is given by the least-significant 5 bits of the second source operand - Nigel
                   ALU_OPC_SLL  = 4'b0001, // shift-left logical
                   ALU_OPC_SRL  = 4'b0101, // shift-right logical
                   ALU_OPC_SRA  = 4'b1101; // shift-right arithmetic
 
-// Implementation
+/////////////////////////q1: everything signed?
+/////////////////////////q2: addition overflow?
+/////////////////////////q3: set all/partial bits?
 
 
 endmodule
