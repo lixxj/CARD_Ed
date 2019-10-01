@@ -65,9 +65,9 @@ localparam [3:0]  // logical
                   ALU_OPC_SRL  = 4'b0101, // shift-right logical
                   ALU_OPC_SRA  = 4'b1101; // shift-right arithmetic
 
-/////////////////////////q1: everything signed?
+/////////////////////////q1: signed?
 /////////////////////////q2: addition overflow?
-/////////////////////////q3: set all/partial bits?
+/////////////////////////q3: set bits?
 
 
 endmodule
