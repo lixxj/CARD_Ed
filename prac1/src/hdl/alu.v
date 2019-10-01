@@ -35,34 +35,34 @@ always @(*)
     begin   
         case(exe_alu_opc_r)
             
-            // logical
-            4'b0111: // bitwise AND
-            alu_result = exe_reg1_r & exe_src2_r; 
-            4'b0110: // bitwise OR
-            alu_result = exe_reg1_r | exe_src2_r; 
-            4'b0100: // bitwise XOR
-            alu_result = exe_reg1_r ^ exe_src2_r; 
+            // logical group
+            ALU_OPC_AND:
+                alu_result = exe_reg1_r & exe_src2_r; 
+            ALU_OPC_OR:
+                alu_result = exe_reg1_r | exe_src2_r; 
+            ALU_OPC_XOR:
+                alu_result = exe_reg1_r ^ exe_src2_r; 
             
-            // Additive: ignore overflow
-            4'b0000: // 2's complement addition
+            // Additive group (ignore overflow)
+            ALU_OPC_ADD: 
                 begin
                     if (exe_sel_pc_r == 32'b0) // use exe_reg1_r
                         alu_result = $signed(exe_reg1_r) + $signed(exe_src2_r);
                     else // exe_sel_pc_r is 1, use exe_pc_r
                         alu_result = $signed(exe_pc_r) + $signed(exe_src2_r);     
                 end
-            4'b1000: // 2's complement subtraction
-            alu_result = $signed(exe_reg1_r) - $signed(exe_src2_r);
+            ALU_OPC_SUB:
+                alu_result = $signed(exe_reg1_r) - $signed(exe_src2_r);
             
-            // Set
-            4'b0010: // set if less than (signed)
+            // Set group
+            ALU_OPC_SLT:
                 begin
                     if ($signed(exe_reg1_r) < $signed(exe_src2_r)) 
                         alu_result = 32'b1; 
                     else
                         alu_result = 32'b0;
                 end
-            4'b0011: // set if less than (unsigned)
+            ALU_OPC_SLTU:
                 begin
                     if (exe_reg1_r < exe_src2_r) 
                         alu_result = 32'b1; 
@@ -70,13 +70,13 @@ always @(*)
                         alu_result = 32'b0;
                 end
             
-            // Shift: shift amount is given by the least-significant 5 bits of the second source operand - Nigel
-            4'b0001: // shift-left logical
-            alu_result = exe_reg1_r << exe_src2_r[4:0]; 
-            4'b0101: // shift-right logical
-            alu_result = exe_reg1_r >> exe_src2_r[4:0]; 
-            4'b1101: // shift-right arithmetic
-            alu_result = exe_reg1_r >>> exe_src2_r[4:0];
+            // Shift group (amount is given by the 5 LSBs of exe_src2_r)
+            ALU_OPC_SLL: 
+                alu_result = exe_reg1_r << exe_src2_r[4:0]; 
+            ALU_OPC_SRL: 
+                alu_result = exe_reg1_r >> exe_src2_r[4:0]; 
+            ALU_OPC_SRA: 
+                alu_result = exe_reg1_r >>> exe_src2_r[4:0];
             
             default: alu_result = 32'b0; 
         
