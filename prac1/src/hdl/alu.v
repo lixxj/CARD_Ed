@@ -64,8 +64,10 @@ always @(*)
         // Additive: ignore overflow
         4'b0000: // 2's complement addition
             begin
-                
-                alu_result = ; 
+                if (exe_sel_pc_r == 0) // use exe_reg1_r
+                    alu_result = ;
+                else // exe_sel_pc_r is 1, use exe_pc_r
+                    alu_result = ; 
             end
         4'b1000: // 2's complement subtraction
         alu_result = ; 
