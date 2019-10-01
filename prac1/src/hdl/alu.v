@@ -65,9 +65,14 @@ localparam [3:0]  // logical
                   ALU_OPC_SRL  = 4'b0101, // shift-right logical
                   ALU_OPC_SRA  = 4'b1101; // shift-right arithmetic
 
-/////////////////////////q1: signed?
-/////////////////////////q2: addition overflow?
-/////////////////////////q3: set bits?
+// logical
+  
+// Additive
+  /////////////////////////q2: addition overflow?
+
+// Set
+
+// Shift: shift amount is given by the least-significant 5 bits of the second source operand - Nigel
 
 
 endmodule
