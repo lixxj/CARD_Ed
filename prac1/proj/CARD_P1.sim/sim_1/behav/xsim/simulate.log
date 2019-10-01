@@ -1,7 +1,0 @@
-Vivado Simulator 2018.3
-Time resolution is 1 ps
-
-Error: no operations are enabled!
-You must enable at least one group of operations in tb.v, on lines 50-53.
-
-$finish called at time : 0 fs : File "/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v" Line 159

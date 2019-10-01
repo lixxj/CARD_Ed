@@ -61,36 +61,38 @@ always @(*)
         4'b0100: // bitwise XOR
         alu_result = exe_reg1_r ^ exe_src2_r; 
         
-        // Additive: ignore overflow
+        /* // Additive: ignore overflow
         4'b0000: // 2's complement addition
             begin
                 if (exe_sel_pc_r == 0) // use exe_reg1_r
-                    alu_result = ;
+                    alu_result = exe_reg1_r + exe_src2_r;
                 else // exe_sel_pc_r is 1, use exe_pc_r
-                    alu_result = ; 
+                    alu_result = exe_reg1_r + exe_pc_r; 
             end
         4'b1000: // 2's complement subtraction
-        alu_result = ; 
+        alu_result = exe_reg1_r - exe_src2_r; 
         
         // Set
         4'b0010: // set if less than (signed)
             begin
-                if () 
-                    alu_result = '1; 
+                if (1==0) 
+                    alu_result = 32'b11111111111111111111111111111111; 
+                else
+                    alu_result = 32'd0;
             end
         4'b0011: // set if less than (unsigned)
             begin
-                if () 
-                    alu_result = '1; 
+                if (1==0) 
+                    alu_result = 32'b11111111111111111111111111111111; 
             end
         
         // Shift: shift amount is given by the least-significant 5 bits of the second source operand - Nigel
         4'b0001: // shift-left logical
-        alu_result = ; 
+        alu_result = 32'd0; 
         4'b0101: // shift-right logical
-        alu_result = ; 
+        alu_result = 32'd0; 
         4'b1101: // shift-right arithmetic
-        alu_result = ; 
+        alu_result = 32'd0; */
         
         default: alu_result = 32'd0; 
     endcase

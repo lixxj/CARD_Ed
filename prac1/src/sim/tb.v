@@ -30,7 +30,7 @@ module tb;
 // This should be at least 1000 times the number of instruction types included
 // in the simulation. Hence, for your final run this should be set to 10000.
 //
-localparam NUM_CYCLES    = 1000;     // set the number of iterations of the test
+localparam NUM_CYCLES    = 10001;     // set the number of iterations of the test
 //
 // You can enable or disable each of four groups of instructions. The groups
 // are:
