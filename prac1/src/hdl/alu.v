@@ -92,7 +92,7 @@ always @(*)
         4'b1101: // shift-right arithmetic
         alu_result = ; 
         
-        default: alu_result = 32'b0; 
+        default: alu_result = 32'd0; 
     endcase
 end
 
