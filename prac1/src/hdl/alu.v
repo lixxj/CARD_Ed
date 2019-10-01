@@ -77,7 +77,7 @@ always @(*)
             
         // Shift: shift amount is given by the least-significant 5 bits of the second source operand - Nigel
         
-        default: alu_result = ; 
+        default: alu_result = 32'b0; 
     endcase
 end
 
