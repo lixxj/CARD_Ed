@@ -76,12 +76,12 @@ always @(*)
         4'b0010: // set if less than (signed)
             begin
                 if () 
-                    alu_result <= '1; 
+                    alu_result = '1; 
             end
         4'b0011: // set if less than (unsigned)
             begin
                 if () 
-                    alu_result <= '1; 
+                    alu_result = '1; 
             end
         
         // Shift: shift amount is given by the least-significant 5 bits of the second source operand - Nigel
