@@ -68,7 +68,7 @@ localparam [3:0]  // logical
 // logical
   
 // Additive
-  /////////////////////////q2: addition overflow?
+  /////////////////////////q2: 2's complement addition overflow?
 
 // Set
 
