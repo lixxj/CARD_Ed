@@ -65,14 +65,20 @@ localparam [3:0]  // logical
                   ALU_OPC_SRL  = 4'b0101, // shift-right logical
                   ALU_OPC_SRA  = 4'b1101; // shift-right arithmetic
 
-// logical
-  
-// Additive
-  /////////////////////////q2: 2's complement addition overflow?
+always @(*)
+    begin
+        // logical
+        case(exe_alu_opc_r)
+        4'b: // 
+        alu_result = ; 
+        // Additive: ignore overflow
+            
+        // Set
+            
+        // Shift: shift amount is given by the least-significant 5 bits of the second source operand - Nigel
+        
+        default: alu_result = ; 
+    endcase
+end
 
-// Set
-
-// Shift: shift amount is given by the least-significant 5 bits of the second source operand - Nigel
-
-
-endmodule
+endmodule // alu
