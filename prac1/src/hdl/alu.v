@@ -74,9 +74,15 @@ always @(*)
         
         // Set
         4'b0010: // set if less than (signed)
-        alu_result = ; 
+            begin
+                if () 
+                    alu_result = ; 
+            end
         4'b0011: // set if less than (unsigned)
-        alu_result = ; 
+            begin
+                if () 
+                    alu_result = ; 
+            end
         
         // Shift: shift amount is given by the least-significant 5 bits of the second source operand - Nigel
         4'b0001: // shift-left logical
