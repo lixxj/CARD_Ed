@@ -56,3 +56,129 @@ launch_simulation
 open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
 source tb.tcl
 run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 1000000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 1000000ns
+set_property -name {xsim.simulate.runtime} -value {1000us} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 1000000ns
+set_property -name {xsim.simulate.runtime} -value {1000000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+set_property -name {xsim.simulate.runtime} -value {10000000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+set_property -name {xsim.simulate.runtime} -value {1s} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl

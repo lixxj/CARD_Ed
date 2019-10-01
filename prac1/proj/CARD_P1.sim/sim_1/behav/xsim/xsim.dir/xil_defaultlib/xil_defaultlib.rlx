@@ -3,7 +3,7 @@
 Dec  6 2018
 23:39:36
 /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/hdl/alu.v,1569953038,verilog,,/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v,,alu,,,../../../../../src/inc,,,,,
+/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/hdl/alu.v,1569964653,verilog,,/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v,,alu,,,../../../../../src/inc,,,,,
 /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/inc/params.v,1569594285,verilog,,,,,,,,,,,,
 ,,,,,,rv32im_alu_0;rv32im_alu_0_alu,,,,,,,,
-/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v,1569952739,verilog,,,/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/inc/params.v,tb,,,../../../../../src/inc,,,,,
+/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v,1569965344,verilog,,,/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/inc/params.v,tb,,,../../../../../src/inc,,,,,
