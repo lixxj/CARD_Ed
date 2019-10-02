@@ -1,4 +1,4 @@
-set MAX_ALU_DELAY 20
+set MAX_ALU_DELAY 9
 
 create_clock -name clk -period $MAX_ALU_DELAY
 set_input_jitter [all_clocks] 0.0

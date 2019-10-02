@@ -1,0 +1,9 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Your ALU passed 100000 random tests, including:
+  a) AND, OR, XOR
+  b) ADD, SUB
+  c) SLT, SLTU
+  d) SLL, SRL, SRA
+Congratulations, your ALU is verified for all functions!
+$finish called at time : 1000015 ns : File "/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v" Line 218
