@@ -31,3 +31,44 @@ close_sim
 launch_simulation
 open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
 source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl

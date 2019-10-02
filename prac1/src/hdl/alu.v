@@ -76,7 +76,7 @@ always @(*)
             ALU_OPC_SRL: 
                 alu_result = exe_reg1_r >> exe_src2_r[4:0]; 
             ALU_OPC_SRA: 
-                alu_result = exe_reg1_r >>> exe_src2_r[4:0];
+                alu_result = $signed(exe_reg1_r) >>> exe_src2_r[4:0];
             
             default: alu_result = 32'b0; 
         

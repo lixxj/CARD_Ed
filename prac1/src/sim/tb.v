@@ -47,9 +47,9 @@ localparam NUM_CYCLES    = 100000;     // set the number of iterations of the te
 // You can set as many as you wish, and the simulation will create a pseudo
 // random mixture of instructions from all of the enabled groups.
 //
-localparam ENABLE_LOGIC  = 0;        // set to 1 to enable testing of AND/OR/XOR
-localparam ENABLE_ADD    = 0;        // set to 1 to enable testing of ADD/SUB
-localparam ENABLE_SET    = 0;        // set to 1 to enable testing of SLT/SLTU
+localparam ENABLE_LOGIC  = 1;        // set to 1 to enable testing of AND/OR/XOR
+localparam ENABLE_ADD    = 1;        // set to 1 to enable testing of ADD/SUB
+localparam ENABLE_SET    = 1;        // set to 1 to enable testing of SLT/SLTU
 localparam ENABLE_SHIFTS = 1;        // set to 1 to enable SLL/SRL/SRA
 
 //==============================================================================
