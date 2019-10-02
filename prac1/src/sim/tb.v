@@ -30,7 +30,7 @@ module tb;
 // This should be at least 1000 times the number of instruction types included
 // in the simulation. Hence, for your final run this should be set to 10000.
 //
-localparam NUM_CYCLES    = 1000;     // set the number of iterations of the test
+localparam NUM_CYCLES    = 100000;     // set the number of iterations of the test
 //
 // You can enable or disable each of four groups of instructions. The groups
 // are:
@@ -50,7 +50,7 @@ localparam NUM_CYCLES    = 1000;     // set the number of iterations of the test
 localparam ENABLE_LOGIC  = 0;        // set to 1 to enable testing of AND/OR/XOR
 localparam ENABLE_ADD    = 0;        // set to 1 to enable testing of ADD/SUB
 localparam ENABLE_SET    = 0;        // set to 1 to enable testing of SLT/SLTU
-localparam ENABLE_SHIFTS = 0;        // set to 1 to enable SLL/SRL/SRA
+localparam ENABLE_SHIFTS = 1;        // set to 1 to enable SLL/SRL/SRA
 
 //==============================================================================
 // You do not need to change anything below this line.
@@ -209,7 +209,7 @@ initial
   // terminate the simulation successfully
   //
   $display("Your ALU passed %0d random tests, including:", NUM_CYCLES);
-  if (ENABLE_LOGIC == 1)  $display("  s) AND, OR, XOR");
+  if (ENABLE_LOGIC == 1)  $display("  a) AND, OR, XOR");
   if (ENABLE_ADD == 1)    $display("  b) ADD, SUB");
   if (ENABLE_SET == 1)    $display("  c) SLT, SLTU");
   if (ENABLE_SHIFTS == 1) $display("  d) SLL, SRL, SRA");

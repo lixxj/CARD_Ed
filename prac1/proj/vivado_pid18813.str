@@ -1,0 +1,656 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 18813
+License: Customer
+
+Current time: 	Wed Oct 02 14:37:02 BST 2019
+Time zone: 	Greenwich Mean Time (GB)
+
+OS: Scientific Linux release 7.6 (Nitrogen)
+OS Version: 3.10.0-1062.1.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0
+Screen size: 1280x1024
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 15 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/tps/lnx64/jre9.0.4
+Java executable location: 	/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	s2003300
+User home directory: /afs/inf.ed.ac.uk/user/s20/s2003300
+User working directory: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj
+User country: 	GB
+User language: 	en
+User locale: 	en_GB
+
+RDI_BASEROOT: /afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado
+HDI_APPROOT: /disk/scratch/Xilinx/Vivado/2018.3
+RDI_DATADIR: /afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/data
+RDI_BINDIR: /afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/bin
+
+Vivado preferences file location: /afs/inf.ed.ac.uk/user/s20/s2003300/.Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: /afs/inf.ed.ac.uk/user/s20/s2003300/.Xilinx/Vivado/2018.3/
+Vivado layouts directory: /afs/inf.ed.ac.uk/user/s20/s2003300/.Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	/afs/inf.ed.ac.uk/group/teaching/cd/VivadoData/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/vivado.log
+Vivado journal file location: 	/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-18813-petterson.inf.ed.ac.uk
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /disk/scratch/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@xilinx-lm.inf.ed.ac.uk
+XILINX_DSP: /disk/scratch/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: /disk/scratch/Xilinx/Vivado/2018.3
+XILINX_SDK: /disk/scratch/Xilinx/SDK/2018.3
+XILINX_VIVADO: /disk/scratch/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: /disk/scratch/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	215 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 5,038 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // af (al, cp)
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "source create_project.tcl"); // aC (Z, cp)
+// Tcl Command: 'source create_project.tcl'
+// Tcl Command: 'source create_project.tcl'
+// bx (cp):  Tcl Command Line : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 5,050 MB. GUI used memory: 43 MB. Current time: 10/2/19, 2:37:05 PM BST
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: source create_project.tcl 
+// Tcl Message: # set proj_name "CARD_P1" # if {[info exists ::create_path]} { # 	set dest_dir $::create_path # } else { # 	set dest_dir [file normalize [file dirname [info script]]] # } # puts "INFO: Creating new project in $dest_dir" 
+// Tcl Message: INFO: Creating new project in /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj 
+// Tcl Message: # cd $dest_dir # set part "xc7z020clg400-1" # set brd_part "tul.com.tw:pynq-z2:part0:1.0" # set origin_dir ".." # set orig_proj_dir "[file normalize "$origin_dir/proj"]" # set src_dir $origin_dir/src # set repo_dir $origin_dir/repo # set_param board.repoPaths "[file normalize "$repo_dir/board_files"]" # create_project -force $proj_name $dest_dir 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 94 MB (+96528kb) [00:00:14]
+// [Engine Memory]: 5,136 MB (+5234149kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  2080 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/disk/scratch/Xilinx/Vivado/2018.3/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PART_MODIFIED
+// TclEventType: BOARD_MODIFIED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 6523.594 ; gain = 118.988 ; free physical = 182 ; free virtual = 21076 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: # add_files -quiet $src_dir/hdl # add_files -quiet [glob -nocomplain ../src/ip/*.xci] 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_OPTIONS_MODIFIED
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: Project created:CARD_P1 
+// [GUI Memory]: 103 MB (+4061kb) [00:00:20]
+// Elapsed time: 10 seconds
+dismissDialog("Tcl Command Line"); // bx (cp)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,239 MB. GUI used memory: 51 MB. Current time: 10/2/19, 2:37:25 PM BST
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, alu (alu.v)]", 2, false); // B (D, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, alu (alu.v)]", 2, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, alu (alu.v)]", 2, false, false, false, false, false, true); // B (D, cp) - Double Click
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 5); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 6); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.v)]", 8, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, tb (tb.v), dut_alu : alu (alu.v)]", 9, false, false, false, false, false, true); // B (D, cp) - Double Click
+// [GUI Memory]: 109 MB (+725kb) [00:00:42]
+selectCodeEditor("tb.v", 301, 216); // cl (w, cp)
+selectCodeEditor("tb.v", 281, 315); // cl (w, cp)
+selectCodeEditor("tb.v", 279, 329); // cl (w, cp)
+selectCodeEditor("tb.v", 278, 350); // cl (w, cp)
+selectCodeEditor("tb.v", 283, 369); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (Q, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cp):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: launch_simulation 
+// TclEventType: LAUNCH_SIM_LOG
+// HMemoryUtils.trashcanNow. Engine heap size: 5,303 MB. GUI used memory: 53 MB. Current time: 10/2/19, 2:38:00 PM BST
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' 
+// Tcl Message: Built simulation snapshot tb_behav 
+// Tcl Message:  ****** Webtalk v2018.3 (64-bit)   **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-186] '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Oct  2 14:38:05 2019. For additional details about this file, please refer to the WebTalk help file at /disk/scratch/Xilinx/Vivado/2018.3/doc/webtalk_introduction.html. INFO: [Common 17-206] Exiting Webtalk at Wed Oct  2 14:38:05 2019... 
+// Tcl Message: run_program: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 6661.438 ; gain = 0.000 ; free physical = 244 ; free virtual = 21036 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.3 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// HMemoryUtils.trashcanNow. Engine heap size: 5,345 MB. GUI used memory: 58 MB. Current time: 10/2/19, 2:38:08 PM BST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg 
+// Tcl Message: source tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 100us 
+// Tcl Message: !! Test failure at cycle 10, DUT output = 0000000e, should be fffffffe $finish called at time : 120 ns : File "/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v" Line 246 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 100us 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 6720.516 ; gain = 59.082 ; free physical = 186 ; free virtual = 20984 
+// 'd' command handler elapsed time: 11 seconds
+// Elapsed time: 11 seconds
+dismissDialog("Run Simulation"); // e (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+maximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aI, cp)
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+// Elapsed time: 12 seconds
+unMaximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aI, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.v", 1); // k (j, cp)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.v", 1, false, true); // k (j, cp) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aF, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.v", 1); // k (j, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("tb.v", 284, 432); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (Q, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// bx (cp):  Close : addNotify
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton (C, I)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// e (cp):  Run Simulation : addNotify
+dismissDialog("Close"); // bx (cp)
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: launch_simulation 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Built simulation snapshot tb_behav 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.3 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// [GUI Memory]: 117 MB (+2840kb) [00:02:08]
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg 
+// Tcl Message: source tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 100us 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 5,361 MB. GUI used memory: 81 MB. Current time: 10/2/19, 2:39:05 PM BST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 100us 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 6740.492 ; gain = 0.000 ; free physical = 191 ; free virtual = 21007 
+// 'd' command handler elapsed time: 14 seconds
+dismissDialog("Run Simulation"); // e (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+maximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aI, cp)
+// Waveform: addNotify
+// Tcl Command: 'rdi::info_commands {start_gu*}'
+// Tcl Command: 'rdi::info_commands {ru*}'
+// Elapsed time: 18 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "run 15000ns", true); // aC (Z, cp)
+// Tcl Command: 'run 15000ns'
+// Tcl Command: 'run 15000ns'
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: run 15000ns 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // aC (Z, cp)
+// Waveform: addNotify
+// Waveform: addNotify
+unMaximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aI, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "run 150000ns", true); // aC (Z, cp)
+// Tcl Command: 'run 150000ns'
+// Tcl Command: 'run 150000ns'
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: run 150000ns 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, (String) null); // aC (Z, cp)
+// bx (cp):  Tcl Command Line : addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+dismissDialog("Tcl Command Line"); // bx (cp)
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "run 150000ns", true); // aC (Z, cp)
+// Tcl Command: 'run 150000ns'
+// Tcl Command: 'run 150000ns'
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: run 150000ns 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// bx (cp):  Tcl Command Line : addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+dismissDialog("Tcl Command Line"); // bx (cp)
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "run 150000ns", true); // aC (Z, cp)
+// Tcl Command: 'run 150000ns'
+// Tcl Command: 'run 150000ns'
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: run 150000ns 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "run 150000ns", true); // aC (Z, cp)
+// bx (cp):  Tcl Command Line : addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+dismissDialog("Tcl Command Line"); // bx (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "run 1500000ns", true); // aC (Z, cp)
+// Tcl Command: 'run 1500000ns'
+// Tcl Command: 'run 1500000ns'
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// Tcl Message: run 1500000ns 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// bx (cp):  Tcl Command Line : addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Your ALU passed 100000 random tests, including:   s) AND, OR, XOR   b) ADD, SUB   c) SLT, SLTU $finish called at time : 1000015 ns : File "/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v" Line 218 run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 6740.492 ; gain = 0.000 ; free physical = 173 ; free virtual = 21022 
+// Elapsed time: 12 seconds
+dismissDialog("Tcl Command Line"); // bx (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 20 seconds
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9); // u (Q, cp)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9); // u (Q, cp)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9); // u (Q, cp)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9); // u (Q, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false, false, false, false, true, false); // u (Q, cp) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_SETTINGS, "Simulation Settings..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// F (cp): Settings: addNotify
+// [Engine Memory]: 5,396 MB (+3641kb) [00:03:43]
+// WARNING: HEventQueue.dispatchEvent() is taking  1902 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 5,398 MB. GUI used memory: 82 MB. Current time: 10/2/19, 2:40:40 PM BST
+selectTab(PAResourceOtoP.ProjectSettingsSimulationPanel_TABBED_PANE, PAResourceOtoP.ProjectSettingsSimulationPanel_SIMULATION, "Simulation", 2); // i (Q, F)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (F)
+// [GUI Memory]: 131 MB (+8627kb) [00:03:50]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property -name {xsim.simulate.runtime} -value {1s} -objects [get_filesets sim_1] 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// [GUI Memory]: 139 MB (+1258kb) [00:03:51]
+dismissDialog("Settings"); // F (cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aF, cp)
+selectCodeEditor("tb.v", 279, 368); // cl (w, cp)
+selectCodeEditor("tb.v", 281, 387); // cl (w, cp)
+selectCodeEditor("tb.v", 281, 406); // cl (w, cp)
+selectCodeEditor("tb.v", 282, 419); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 0); // k (j, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,425 MB. GUI used memory: 74 MB. Current time: 10/2/19, 2:41:15 PM BST
+// Elapsed time: 74 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.v", 1); // k (j, cp)
+selectCodeEditor("tb.v", 392, 431); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 0); // k (j, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (Q, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// bx (cp):  Close : addNotify
+selectButton("PAResourceQtoS.SimulationRun_SIMULATION_ALREADY_RUNNING_DO_YOU_Yes", "Yes"); // JButton (C, I)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// e (cp):  Run Simulation : addNotify
+dismissDialog("Close"); // bx (cp)
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: launch_simulation 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Built simulation snapshot tb_behav 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -view {/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.3 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 5,412 MB. GUI used memory: 90 MB. Current time: 10/2/19, 2:42:49 PM BST
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: Time resolution is 1 ps 
+// Tcl Message: open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg 
+// Tcl Message: source tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1s 
+// Tcl Message: !! Test failure at cycle 1, DUT output = 00058f82, should be fffd8f82 $finish called at time : 30 ns : File "/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb.v" Line 246 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1s 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6929.617 ; gain = 0.000 ; free physical = 341 ; free virtual = 20899 
+// 'd' command handler elapsed time: 8 seconds
+dismissDialog("Run Simulation"); // e (cp)
+maximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aI, cp)
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Waveform: addNotify
+// Waveform: addNotify
+// Elapsed time: 18 seconds
+unMaximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aI, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.v", 1); // k (j, cp)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "tb.v", 1, false, true); // k (j, cp) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aF, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 0); // k (j, cp)
+selectCodeEditor("alu.v", 470, 388); // cl (w, cp)
+selectCodeEditor("alu.v", 252, 428); // cl (w, cp)
+selectCodeEditor("alu.v", 259, 432); // cl (w, cp)
+// Waveform: addNotify
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// Elapsed time: 24 seconds
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aF, cp)
+maximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aI, cp)
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+unMaximizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax (aI, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 0); // k (j, cp)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "alu.v", 0, false, true); // k (j, cp) - Double Click
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (aF, cp)
+// Elapsed time: 31 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_TCL_CONSOLE, "Tcl Console"); // ax
