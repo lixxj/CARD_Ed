@@ -48,7 +48,7 @@
 
 
 // IP VLNV: inf.ed.ac.uk:user:rv32im_alu:1.0
-// IP Revision: 1
+// IP Revision: 2
 
 // Forward declaration of the netlist blackbox
 (* black_box = "1" *)

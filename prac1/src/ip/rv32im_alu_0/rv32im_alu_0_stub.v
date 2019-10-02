@@ -1,13 +1,13 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat Jul 20 14:28:48 2019
+// Date        : Tue Oct  1 19:54:02 2019
 // Host        : bilbo running 64-bit Service Pack 1  (build 7601)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/nigel/Documents/svn_roots/computerdesign/CARD_Practicals_2019/Practical_2/proj/RV32IM_RM.srcs/sources_1/ip/rv32im_alu_0/rv32im_alu_0_stub.v
+//               c:/Users/nigel/Documents/svn_roots/computerdesign/CARD_Practicals_2019/Practical_1/prac1/proj/CARD_P1.srcs/sources_1/ip/rv32im_alu_0/rv32im_alu_0_stub.v
 // Design      : rv32im_alu_0
 // Purpose     : Stub declaration of top-level module interface
-// Device      : xc7z010clg400-3
+// Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
