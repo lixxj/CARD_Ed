@@ -2,11 +2,15 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 //
-// Description:    Integer ALU for RISC-V core (RV32I version)
+// The University of Edinburgh 
+//
+// Computer Architecture and Design 2019-2020 semester 1, Practical 1
+// 
+// Integer ALU for RISC-V core (RV32I version) in Verilog® HDL
 //
 // Completed by XJ Xingjian Li, s2003300
 // 
-// Sep/Oct 2019
+// September/October 2019
 //
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -35,7 +39,7 @@ always @(*)
     begin   
         case(exe_alu_opc_r)
             
-            // logical group
+            // logical
             ALU_OPC_AND:
                 alu_result = exe_reg1_r & exe_src2_r; 
             ALU_OPC_OR:
@@ -43,34 +47,34 @@ always @(*)
             ALU_OPC_XOR:
                 alu_result = exe_reg1_r ^ exe_src2_r; 
             
-            // Additive group (ignore overflow)
+            // Additive (ignore overflow)
             ALU_OPC_ADD: 
                 begin
                     if (exe_sel_pc_r == 32'b0) // use exe_reg1_r
                         alu_result = $signed(exe_reg1_r) + $signed(exe_src2_r);
-                    else // exe_sel_pc_r is 1, use exe_pc_r
+                    else // if exe_sel_pc_r is 1, use exe_pc_r
                         alu_result = $signed(exe_pc_r) + $signed(exe_src2_r);     
                 end
             ALU_OPC_SUB:
                 alu_result = $signed(exe_reg1_r) - $signed(exe_src2_r);
             
-            // Set group
+          // Set (if less than)
             ALU_OPC_SLT:
                 begin
                     if ($signed(exe_reg1_r) < $signed(exe_src2_r)) 
                         alu_result = 32'b1; 
-                    else
+                    else // clear bits
                         alu_result = 32'b0;
                 end
             ALU_OPC_SLTU:
                 begin
                     if (exe_reg1_r < exe_src2_r) 
                         alu_result = 32'b1; 
-                    else
+                    else // clear bits
                         alu_result = 32'b0;
                 end
             
-            // Shift group (amount is given by the 5 LSBs of exe_src2_r)
+            // Shift (amount is given by the 5 LSBs of exe_src2_r)
             ALU_OPC_SLL: 
                 alu_result = exe_reg1_r << exe_src2_r[4:0]; 
             ALU_OPC_SRL: 
@@ -80,7 +84,7 @@ always @(*)
             
             default: alu_result = 32'b0; 
         
-        endcase
-    end
+        endcase // exe_alu_opc_r
+    end // of always
     
-endmodule // alu
+endmodule // of alu
