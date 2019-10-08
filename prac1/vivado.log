@@ -1,0 +1,240 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct  8 17:33:41 2019
+# Process ID: 7705
+# Current directory: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1
+# Command line: vivado
+# Log file: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/vivado.log
+# Journal file: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/disk/scratch/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'rv32im_alu_0' is locked:
+* IP definition 'rv32im_alu (1.0)' for IP 'rv32im_alu_0' (customized with software release 2018.3) was not found in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 6553.242 ; gain = 151.766 ; free physical = 6008 ; free virtual = 21780
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct  8 17:35:59 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:4]
+all_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 7366.383 ; gain = 502.578 ; free physical = 4894 ; free virtual = 20905
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7366.383 ; gain = 0.000 ; free physical = 4914 ; free virtual = 20924
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 7414.254 ; gain = 779.863 ; free physical = 4807 ; free virtual = 20823
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct  8 17:38:58 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct  8 17:40:22 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Tue Oct  8 17:40:46 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:4]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_1
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:4]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct  8 17:52:31 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_1
+refresh_design
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:4]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_1
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:4]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Tue Oct  8 17:56:43 2019] Launched synth_1...
+Run output will be captured here: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.runs/synth_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:4]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc]
+Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/constraints/timing.xdc:3]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified setup uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for r on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to r on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+CRITICAL WARNING: [Timing 38-195] User-specified hold uncertainty 0 for f on clk to f on clk is less than the automatically computed uncertainty of 2.5e-11. Timing analysis will be inaccurate!
+Resolution: Check that the user-specified clock uncertainty is accurate and reflects the designer's intent
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+report_utilization -name utilization_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  8 17:59:06 2019...
