@@ -1,0 +1,204 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct  1 17:40:30 2019
+# Process ID: 2623
+# Current directory: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD
+# Command line: vivado
+# Log file: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/vivado.log
+# Journal file: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/proj/CARD_P1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+XJJJXJX
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+ggggggg
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+nnnnnnnnnnnnnnnnnnnn
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+hhhhhhhhhhhhhhhhhhhhhhh
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 150000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 1000000ns
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 1000000ns
+set_property -name {xsim.simulate.runtime} -value {1000us} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+run 1000000ns
+set_property -name {xsim.simulate.runtime} -value {1000000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+set_property -name {xsim.simulate.runtime} -value {10000000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+set_property -name {xsim.simulate.runtime} -value {1s} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+close_sim
+launch_simulation
+open_wave_config /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac1/src/sim/tb_behav.wcfg
+source tb.tcl
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+close_sim
