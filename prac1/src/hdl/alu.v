@@ -86,7 +86,8 @@ always @(*)
             ALU_OPC_SRA: 
                 alu_result = $signed(exe_reg1_r) >>> exe_src2_r[4:0];
             
-            default: alu_result = 32'b0; 
+            default: // resolve undefined opcodes
+                alu_result = 32'b0; // clear all bits
         
         endcase // exe_alu_opc_r
     end // always
