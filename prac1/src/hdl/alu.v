@@ -39,7 +39,7 @@ always @(*)
     begin   
         case(exe_alu_opc_r)
             
-            // logical
+            ////////// LOGICAL //////////
             ALU_OPC_AND:
                 alu_result = exe_reg1_r & exe_src2_r; 
             ALU_OPC_OR:
@@ -47,7 +47,7 @@ always @(*)
             ALU_OPC_XOR:
                 alu_result = exe_reg1_r ^ exe_src2_r; 
             
-            // Additive (ignore overflow)
+            ////////// ADDITIVE //////////
             ALU_OPC_ADD: 
                 begin
                     if (exe_sel_pc_r == 32'b0) // use exe_reg1_r
@@ -58,7 +58,7 @@ always @(*)
             ALU_OPC_SUB:
                 alu_result = $signed(exe_reg1_r) - $signed(exe_src2_r);
             
-          // Set (if less than)
+            ////////// COMPARISON SET //////////
             ALU_OPC_SLT:
                 begin
                     if ($signed(exe_reg1_r) < $signed(exe_src2_r)) 
@@ -74,7 +74,7 @@ always @(*)
                         alu_result = 32'b0;
                 end
             
-            // Shift (amount is given by the 5 LSBs of exe_src2_r)
+            ////////// SHIFT //////////
             ALU_OPC_SLL: 
                 alu_result = exe_reg1_r << exe_src2_r[4:0]; 
             ALU_OPC_SRL: 
@@ -85,6 +85,6 @@ always @(*)
             default: alu_result = 32'b0; 
         
         endcase // exe_alu_opc_r
-    end // of always
+    end // always
     
-endmodule // of alu
+endmodule // alu
