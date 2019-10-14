@@ -1,3 +1,5 @@
+
+
 `timescale 1ns / 1ps
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -55,6 +57,7 @@ always @(*)
                     else // if exe_sel_pc_r is 1, use exe_pc_r
                         alu_result = $signed(exe_pc_r) + $signed(exe_src2_r);     
                 end
+            
             ALU_OPC_SUB:
                 alu_result = $signed(exe_reg1_r) - $signed(exe_src2_r);
             
@@ -67,7 +70,7 @@ always @(*)
                         alu_result = 32'b0;
                 end
             
-          ALU_OPC_SLTU:
+            ALU_OPC_SLTU:
                 begin
                     if (exe_reg1_r < exe_src2_r) 
                         alu_result = 32'b1; 
