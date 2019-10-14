@@ -66,7 +66,8 @@ always @(*)
                     else // clear bits
                         alu_result = 32'b0;
                 end
-            ALU_OPC_SLTU:
+            
+          ALU_OPC_SLTU:
                 begin
                     if (exe_reg1_r < exe_src2_r) 
                         alu_result = 32'b1; 
