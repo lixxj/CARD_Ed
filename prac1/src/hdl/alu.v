@@ -64,17 +64,17 @@ always @(*)
             ////////// COMPARISON SET //////////
             ALU_OPC_SLT:
                 begin
-                    if ($signed(exe_reg1_r) < $signed(exe_src2_r)) 
+                  if ($signed(exe_reg1_r) < $signed(exe_src2_r)) // set bit
                         alu_result = 32'b1; 
-                    else // clear bits
+                    else // if !<, clear bits
                         alu_result = 32'b0;
                 end
             
             ALU_OPC_SLTU:
                 begin
-                    if (exe_reg1_r < exe_src2_r) 
+                    if (exe_reg1_r < exe_src2_r) // set bit
                         alu_result = 32'b1; 
-                    else // clear bits
+                    else // if !<, clear bits
                         alu_result = 32'b0;
                 end
             
