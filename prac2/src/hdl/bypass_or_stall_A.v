@@ -60,25 +60,26 @@ module bypass_or_stall(
 always @*
     begin : bypass_stall_PROC
         
-        ////////// reset status //////////
+        ////////// Initialization //////////
         dec_stall = 1'b0;
         dec_load_use = 1'b0;
         dec_csr_use = 1'b0;
         
         ////////// rs1 status //////////
         dec_stall = dec_stall || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb);
-        dec_load_use = dec_load_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_load);
-        dec_csr_use = dec_csr_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_csr);       
         dec_stall = dec_stall || (dec_rs1 == mem_rd && mem_rd_wenb && dec_rs1_renb);
         dec_stall = dec_stall || (dec_rs1 == wrb_rd && wrb_rd_wenb && dec_rs1_renb);
+        dec_load_use = dec_load_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_load);
+        dec_csr_use = dec_csr_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_csr);              
         
         ////////// rs2 status //////////
         dec_stall = dec_stall || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb);
-        dec_load_use = dec_load_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_load);
-        dec_csr_use = dec_csr_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_csr);      
         dec_stall = dec_stall || (dec_rs2 == mem_rd && mem_rd_wenb && dec_rs2_renb);
         dec_stall = dec_stall || (dec_rs2 == wrb_rd && wrb_rd_wenb && dec_rs2_renb);
+        dec_load_use = dec_load_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_load);
+        dec_csr_use = dec_csr_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_csr);              
         
+        // default source register data values (for PART A) 
         dec_rs1_data = dec_rdata1;
         dec_rs2_data = dec_rdata2;
     

@@ -60,31 +60,33 @@ module bypass_or_stall(
 always @*
     begin : bypass_stall_PROC
         
-        // reset status
+        ////////// reset status //////////
         dec_stall = 1'b0;
         dec_load_use = 1'b0;
         dec_csr_use = 1'b0;
         
-        // rs1 status
+        ////////// rs1 status //////////
         dec_stall = dec_stall || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb);
-        dec_load_use = dec_load_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_load);
-        dec_csr_use = dec_csr_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_csr);       
         dec_stall = dec_stall || (dec_rs1 == mem_rd && mem_rd_wenb && dec_rs1_renb);
         dec_stall = dec_stall || (dec_rs1 == wrb_rd && wrb_rd_wenb && dec_rs1_renb);
+        dec_load_use = dec_load_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_load);
+        dec_csr_use = dec_csr_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_csr);              
         
-        // rs2 status
+        ////////// rs2 status //////////
         dec_stall = dec_stall || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb);
-        dec_load_use = dec_load_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_load);
-        dec_csr_use = dec_csr_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_csr);      
         dec_stall = dec_stall || (dec_rs2 == mem_rd && mem_rd_wenb && dec_rs2_renb);
         dec_stall = dec_stall || (dec_rs2 == wrb_rd && wrb_rd_wenb && dec_rs2_renb);
+        dec_load_use = dec_load_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_load);
+        dec_csr_use = dec_csr_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_csr);    
         
-        //===========================================================================
-        // Leave these next two lines intact for Part (a), but for Part (b)
-        // the logic for dec_rs1_data and dec_rs2_data will need to be modified.
-        //
+        // TODO: deliver the most recent downstream speculative value for each operand, 
+        // or the value read from the register file if there is no downstream dependency 
         dec_rs1_data    = dec_rdata1;
         dec_rs2_data    = dec_rdata2;
+        
+
+        // TODO: remove all stalls that are not needed when a speculative result can be forwarded to the DEC stage
+
     
     end // bypass_stall_PROC
 
