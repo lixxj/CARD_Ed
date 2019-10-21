@@ -11,10 +11,6 @@
 // The entire notice above must be reproduced on all authorized copies.
 //
 ////////////////////////////////////////////////////////////////////////////////
-//
-// Description:    Result bypass and stall logic for RISC-V core
-// 
-////////////////////////////////////////////////////////////////////////////////
 
 module bypass_or_stall(
 
@@ -57,6 +53,11 @@ module bypass_or_stall(
     output reg [31:0] dec_rs2_data    // R[rs2] value to pass on to EXE stage
 );
 
+////////////////////////////////////////////////////////////////////////////////
+// Result bypass and stall logic for RISC-V core - PART A
+// The following section is written by XJ, in October 2019
+// XJ Xingjian Li, s2003300
+////////////////////////////////////////////////////////////////////////////////
 always @*
     begin : bypass_stall_PROC
         
@@ -79,13 +80,9 @@ always @*
         dec_stall = dec_stall || (dec_rs2 == mem_rd && mem_rd_wenb && dec_rs2_renb);
         dec_stall = dec_stall || (dec_rs2 == wrb_rd && wrb_rd_wenb && dec_rs2_renb);
         
-        //===========================================================================
-        // Leave these next two lines intact for Part (a), but for Part (b)
-        // the logic for dec_rs1_data and dec_rs2_data will need to be modified.
-        //
         dec_rs1_data    = dec_rdata1;
         dec_rs2_data    = dec_rdata2;
     
-    end // bypass_stall_PROC
+    end // bypass_stall_PROC of PART A
 
 endmodule
