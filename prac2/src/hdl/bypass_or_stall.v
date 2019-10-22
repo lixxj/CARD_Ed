@@ -60,6 +60,8 @@ module bypass_or_stall(
 always @*
     begin : bypass_stall_PROC
         
+        //$display("%b %b %b\n", exe_rd_wenb, mem_rd_wenb, wrb_rd_wenb);
+        
         ////////// reset status //////////
         dec_stall = 1'b0;
         dec_load_use = 1'b0;
@@ -81,12 +83,32 @@ always @*
         
         // TODO: deliver the most recent downstream speculative value for each operand, 
         // or the value read from the register file if there is no downstream dependency 
-        dec_rs1_data    = dec_rdata1;
-        dec_rs2_data    = dec_rdata2;
-        
-
         // TODO: remove all stalls that are not needed when a speculative result can be forwarded to the DEC stage
-
+        dec_rs1_data = dec_rdata1;
+        dec_rs2_data = dec_rdata2;
+        
+        if (dec_stall)
+        begin
+            
+            if (!exe_load && !exe_csr && (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb))
+            begin
+                dec_rs1_data = exe_result;
+                dec_stall = 1'b0;
+            end
+            
+            else if (exe_load && !exe_csr && (dec_rs1 == mem_rd && mem_rd_wenb && dec_rs1_renb))
+            begin
+                dec_rs1_data = mem_result;
+                dec_stall = 1'b0;
+            end
+            
+            else if (exe_load && !exe_csr && (dec_rs1 == wrb_rd && wrb_rd_wenb && dec_rs1_renb))
+            begin
+                dec_rs1_data = wrb_result;
+                dec_stall = 1'b0;
+            end
+            
+        end   
     
     end // bypass_stall_PROC
 
