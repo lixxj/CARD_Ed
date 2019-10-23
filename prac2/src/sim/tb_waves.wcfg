@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="6071349333fs"></ZoomStartTime>
-      <ZoomEndTime time="6188749334fs"></ZoomEndTime>
-      <Cursor1Time time="6128549000fs"></Cursor1Time>
+      <ZoomStartTime time="6023016000fs"></ZoomStartTime>
+      <ZoomEndTime time="6035816001fs"></ZoomEndTime>
+      <Cursor1Time time="6033666000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="249"></NameColumnWidth>
-      <ValueColumnWidth column_width="266"></ValueColumnWidth>
+      <ValueColumnWidth column_width="230"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="69" />
+   <WVObjectSize size="97" />
    <wvobject type="array" fp_name="/tb/btn_a">
       <obj_property name="ElementShortName">btn_a[3:1]</obj_property>
       <obj_property name="ObjectShortName">btn_a[3:1]</obj_property>
@@ -444,5 +444,117 @@
    <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_rs2_data">
       <obj_property name="ElementShortName">dec_rs2_data[31:0]</obj_property>
       <obj_property name="ObjectShortName">dec_rs2_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_rs1">
+      <obj_property name="ElementShortName">dec_rs1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_rs1[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_rs1_renb">
+      <obj_property name="ElementShortName">dec_rs1_renb</obj_property>
+      <obj_property name="ObjectShortName">dec_rs1_renb</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_rdata1">
+      <obj_property name="ElementShortName">dec_rdata1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_rdata1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_rs2">
+      <obj_property name="ElementShortName">dec_rs2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_rs2[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_rs2_renb">
+      <obj_property name="ElementShortName">dec_rs2_renb</obj_property>
+      <obj_property name="ObjectShortName">dec_rs2_renb</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_rdata2">
+      <obj_property name="ElementShortName">dec_rdata2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_rdata2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/exe_rd">
+      <obj_property name="ElementShortName">exe_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">exe_rd[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/exe_rd_wenb">
+      <obj_property name="ElementShortName">exe_rd_wenb</obj_property>
+      <obj_property name="ObjectShortName">exe_rd_wenb</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/exe_result">
+      <obj_property name="ElementShortName">exe_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">exe_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/exe_load">
+      <obj_property name="ElementShortName">exe_load</obj_property>
+      <obj_property name="ObjectShortName">exe_load</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/exe_csr">
+      <obj_property name="ElementShortName">exe_csr</obj_property>
+      <obj_property name="ObjectShortName">exe_csr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/mem_rd">
+      <obj_property name="ElementShortName">mem_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_rd[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/mem_rd_wenb">
+      <obj_property name="ElementShortName">mem_rd_wenb</obj_property>
+      <obj_property name="ObjectShortName">mem_rd_wenb</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/mem_result">
+      <obj_property name="ElementShortName">mem_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/wrb_rd">
+      <obj_property name="ElementShortName">wrb_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">wrb_rd[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/wrb_rd_wenb">
+      <obj_property name="ElementShortName">wrb_rd_wenb</obj_property>
+      <obj_property name="ObjectShortName">wrb_rd_wenb</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/wrb_result">
+      <obj_property name="ElementShortName">wrb_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wrb_result[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_stall">
+      <obj_property name="ElementShortName">dec_stall</obj_property>
+      <obj_property name="ObjectShortName">dec_stall</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_load_use">
+      <obj_property name="ElementShortName">dec_load_use</obj_property>
+      <obj_property name="ObjectShortName">dec_load_use</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_csr_use">
+      <obj_property name="ElementShortName">dec_csr_use</obj_property>
+      <obj_property name="ObjectShortName">dec_csr_use</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_rs1_data">
+      <obj_property name="ElementShortName">dec_rs1_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_rs1_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/dec_rs2_data">
+      <obj_property name="ElementShortName">dec_rs2_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dec_rs2_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/rs1_exe">
+      <obj_property name="ElementShortName">rs1_exe</obj_property>
+      <obj_property name="ObjectShortName">rs1_exe</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/rs1_mem">
+      <obj_property name="ElementShortName">rs1_mem</obj_property>
+      <obj_property name="ObjectShortName">rs1_mem</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/rs1_wrb">
+      <obj_property name="ElementShortName">rs1_wrb</obj_property>
+      <obj_property name="ObjectShortName">rs1_wrb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/rs2_exe">
+      <obj_property name="ElementShortName">rs2_exe</obj_property>
+      <obj_property name="ObjectShortName">rs2_exe</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/rs2_mem">
+      <obj_property name="ElementShortName">rs2_mem</obj_property>
+      <obj_property name="ObjectShortName">rs2_mem</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb/dut/u_cpu/u_exec_unit/u_bypass_or_stall/rs2_wrb">
+      <obj_property name="ElementShortName">rs2_wrb</obj_property>
+      <obj_property name="ObjectShortName">rs2_wrb</obj_property>
    </wvobject>
 </wave_config>

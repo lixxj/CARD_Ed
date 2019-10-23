@@ -72,6 +72,12 @@ always @*
         dec_stall = 0;
         dec_load_use = 0;
         dec_csr_use = 0;
+        rs1_exe = 0;
+        rs1_mem = 0;
+        rs1_wrb = 0;
+        rs2_exe = 0;
+        rs2_mem = 0;
+        rs2_wrb = 0;
         
         ////////// rs1 //////////
         if (dec_rs1_renb == 1) // rs1 is used
@@ -87,13 +93,13 @@ always @*
                     dec_csr_use = 1;
             end
             
-            if (mem_rd_wenb == 1 && dec_rs1 == mem_rd)
+            else if (mem_rd_wenb == 1 && dec_rs1 == mem_rd)
             begin
                 dec_stall = 1; 
                 rs1_mem = 1;
             end
             
-            if (wrb_rd_wenb == 1 && dec_rs1 == wrb_rd)
+            else if (wrb_rd_wenb == 1 && dec_rs1 == wrb_rd)
             begin
                 dec_stall = 1; 
                 rs1_wrb = 1;
@@ -115,13 +121,13 @@ always @*
                     dec_csr_use = 1;
             end
             
-            if (mem_rd_wenb == 1 && dec_rs2 == mem_rd)
+            else if (mem_rd_wenb == 1 && dec_rs2 == mem_rd)
             begin
                 dec_stall = 1; 
                 rs2_mem = 1;
             end
             
-            if (wrb_rd_wenb == 1 && dec_rs2 == wrb_rd)
+            else if (wrb_rd_wenb == 1 && dec_rs2 == wrb_rd)
             begin
                 dec_stall = 1; 
                 rs2_wrb = 1;
@@ -129,15 +135,54 @@ always @*
             
         end
        
-        // TODO: deliver the most recent downstream speculative value for each operand, 
-        // or the value read from the register file if there is no downstream dependency 
-        // TODO: remove all stalls that are not needed when a speculative result can be forwarded to the DEC stage
         dec_rs1_data = dec_rdata1;
         dec_rs2_data = dec_rdata2;
         
         if (dec_stall == 1)
         begin
-            ;
+            
+            if (rs1_exe == 1)
+            begin
+                if (exe_load == 0 && exe_csr == 0) 
+                begin
+                    dec_rs1_data = exe_result;
+                    dec_stall = 0;
+                end
+            end
+
+            if (rs1_mem == 1)
+            begin
+                dec_rs1_data = mem_result;
+                dec_stall = 0;
+            end
+
+            if (rs1_wrb == 1)
+            begin
+                dec_rs1_data = wrb_result;
+                dec_stall = 0;
+            end
+ 
+            if (rs2_exe == 1)
+            begin
+                if (exe_load == 0 && exe_csr == 0)
+                begin
+                    dec_rs2_data = exe_result;
+                    dec_stall = 0;
+                end
+            end
+
+            if (rs2_mem == 1)
+            begin
+                dec_rs2_data = mem_result;
+                dec_stall = 0;
+            end
+
+            if (rs2_wrb == 1)
+            begin
+                dec_rs2_data = wrb_result;
+                dec_stall = 0;
+            end
+            
         end
             
     end // bypass_stall_PROC
