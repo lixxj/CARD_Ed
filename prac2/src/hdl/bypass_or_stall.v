@@ -57,78 +57,87 @@ module bypass_or_stall(
     output reg [31:0] dec_rs2_data    // R[rs2] value to pass on to EXE stage
 );
 
+// Sources of stall
+reg rs1_exe = 0;
+reg rs1_mem = 0;
+reg rs1_wrb = 0;
+reg rs2_exe = 0;
+reg rs2_mem = 0;
+reg rs2_wrb = 0;
+
 always @*
     begin : bypass_stall_PROC
         
-        ////////// reset status //////////
-        dec_stall = 1'b0;
-        dec_load_use = 1'b0;
-        dec_csr_use = 1'b0;
+        ////////// reset //////////
+        dec_stall = 0;
+        dec_load_use = 0;
+        dec_csr_use = 0;
         
-        ////////// rs1 status //////////
-        dec_stall = dec_stall || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb);
-        dec_stall = dec_stall || (dec_rs1 == mem_rd && mem_rd_wenb && dec_rs1_renb);
-        dec_stall = dec_stall || (dec_rs1 == wrb_rd && wrb_rd_wenb && dec_rs1_renb);
-        dec_load_use = dec_load_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_load);
-        dec_csr_use = dec_csr_use || (dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb && exe_csr);              
+        ////////// rs1 //////////
+        if (dec_rs1_renb == 1) // rs1 is used
+        begin
+            
+            if (exe_rd_wenb == 1 && dec_rs1 == exe_rd)
+            begin
+                dec_stall = 1; 
+                rs1_exe = 1;
+                if (exe_load == 1)
+                    dec_load_use = 1;
+                if (exe_csr == 1)
+                    dec_csr_use = 1;
+            end
+            
+            if (mem_rd_wenb == 1 && dec_rs1 == mem_rd)
+            begin
+                dec_stall = 1; 
+                rs1_mem = 1;
+            end
+            
+            if (wrb_rd_wenb == 1 && dec_rs1 == wrb_rd)
+            begin
+                dec_stall = 1; 
+                rs1_wrb = 1;
+            end
+            
+        end
         
-        ////////// rs2 status //////////
-        dec_stall = dec_stall || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb);
-        dec_stall = dec_stall || (dec_rs2 == mem_rd && mem_rd_wenb && dec_rs2_renb);
-        dec_stall = dec_stall || (dec_rs2 == wrb_rd && wrb_rd_wenb && dec_rs2_renb);
-        dec_load_use = dec_load_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_load);
-        dec_csr_use = dec_csr_use || (dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb && exe_csr);    
-        
+        ////////// rs2 //////////
+        if (dec_rs2_renb == 1) // rs2 is used
+        begin
+            
+            if (exe_rd_wenb == 1 && dec_rs2 == exe_rd)
+            begin
+                dec_stall = 1; 
+                rs2_exe = 1;
+                if (exe_load == 1)
+                    dec_load_use = 1;
+                if (exe_csr == 1)
+                    dec_csr_use = 1;
+            end
+            
+            if (mem_rd_wenb == 1 && dec_rs2 == mem_rd)
+            begin
+                dec_stall = 1; 
+                rs2_mem = 1;
+            end
+            
+            if (wrb_rd_wenb == 1 && dec_rs2 == wrb_rd)
+            begin
+                dec_stall = 1; 
+                rs2_wrb = 1;
+            end
+            
+        end
+       
         // TODO: deliver the most recent downstream speculative value for each operand, 
         // or the value read from the register file if there is no downstream dependency 
         // TODO: remove all stalls that are not needed when a speculative result can be forwarded to the DEC stage
         dec_rs1_data = dec_rdata1;
         dec_rs2_data = dec_rdata2;
         
-        if (dec_stall) 
+        if (dec_stall == 1)
         begin
-
-            //if ((dec_rs1 == mem_rd && mem_rd_wenb && dec_rs1_renb) && (dec_rs1 == wrb_rd && wrb_rd_wenb && dec_rs1_renb))
-                //$display("\n\n\n\n999999999999\n\n\n\n");
-
-            if ((dec_rs1 == mem_rd && mem_rd_wenb && dec_rs1_renb))
-            begin    
-                dec_rs1_data = mem_result;
-                dec_stall = 1'b0;
-            end
-            
-            if ((dec_rs1 == wrb_rd && wrb_rd_wenb && dec_rs1_renb))
-            begin
-                dec_rs1_data = wrb_result;
-                dec_stall = 1'b0;
-            end
-            
-            /*if ((dec_rs1 == exe_rd && exe_rd_wenb && dec_rs1_renb))
-            begin
-                dec_rs1_data = exe_result;
-                if (!exe_load && !exe_csr)
-                    dec_stall = 1'b0;
-            end*/
-            
-            /*if ((dec_rs2 == mem_rd && mem_rd_wenb && dec_rs2_renb))
-            begin    
-                dec_rs2_data = mem_result;
-                dec_stall = 1'b0;
-            end*/
-            
-            /*if ((dec_rs2 == wrb_rd && wrb_rd_wenb && dec_rs2_renb))
-            begin
-                dec_rs2_data = wrb_result;
-                dec_stall = 1'b0;
-            end*/
-            
-            /*if ((dec_rs2 == exe_rd && exe_rd_wenb && dec_rs2_renb))
-            begin
-                dec_rs2_data = exe_result;
-                if (!exe_load && !exe_csr)
-                    dec_stall = 1'b0;
-            end*/
-            
+            ;
         end
             
     end // bypass_stall_PROC
