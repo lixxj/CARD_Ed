@@ -9,11 +9,6 @@
 // license from Nigel Topham.
 //
 // The entire notice above must be reproduced on all authorized copies.
-//
-////////////////////////////////////////////////////////////////////////////////
-//
-// Description:    Result bypass and stall logic for RISC-V core
-// 
 ////////////////////////////////////////////////////////////////////////////////
 
 module bypass_or_stall(
@@ -57,6 +52,12 @@ module bypass_or_stall(
     output reg [31:0] dec_rs2_data    // R[rs2] value to pass on to EXE stage
 );
 
+////////////////////////////////////////////////////////////////////////////////
+// Result bypass and stall logic for RISC-V core 
+// The following sections were written by XJ, in October 2019
+// XJ Xingjian Li, s2003300
+////////////////////////////////////////////////////////////////////////////////
+
 // Sources of stall
 reg rs1_exe = 0;
 reg rs1_mem = 0;
@@ -68,7 +69,7 @@ reg rs2_wrb = 0;
 always @*
     begin : bypass_stall_PROC
         
-        ////////// reset //////////
+        ////////// Reset //////////
         dec_stall = 0;
         dec_load_use = 0;
         dec_csr_use = 0;
@@ -80,111 +81,108 @@ always @*
         rs2_wrb = 0;
         
         ////////// rs1 //////////
-        if (dec_rs1_renb == 1) // rs1 is used
-        begin
-            
-            if (exe_rd_wenb == 1 && dec_rs1 == exe_rd)
+        if (dec_rs1_renb) // rs1 is used
+        begin            
+            if (exe_rd_wenb && dec_rs1 == exe_rd)
             begin
                 dec_stall = 1; 
                 rs1_exe = 1;
-                if (exe_load == 1)
+                if (exe_load)
                     dec_load_use = 1;
-                if (exe_csr == 1)
+                if (exe_csr)
                     dec_csr_use = 1;
             end
             
-            else if (mem_rd_wenb == 1 && dec_rs1 == mem_rd)
+            else if (mem_rd_wenb && dec_rs1 == mem_rd)
             begin
                 dec_stall = 1; 
                 rs1_mem = 1;
             end
             
-            else if (wrb_rd_wenb == 1 && dec_rs1 == wrb_rd)
+            else if (wrb_rd_wenb && dec_rs1 == wrb_rd)
             begin
                 dec_stall = 1; 
                 rs1_wrb = 1;
-            end
-            
-        end
+            end            
+        end // rs1
         
         ////////// rs2 //////////
-        if (dec_rs2_renb == 1) // rs2 is used
-        begin
-            
-            if (exe_rd_wenb == 1 && dec_rs2 == exe_rd)
+        if (dec_rs2_renb) // rs2 is used
+        begin            
+            if (exe_rd_wenb && dec_rs2 == exe_rd)
             begin
                 dec_stall = 1; 
                 rs2_exe = 1;
-                if (exe_load == 1)
+                if (exe_load)
                     dec_load_use = 1;
-                if (exe_csr == 1)
+                if (exe_csr)
                     dec_csr_use = 1;
             end
             
-            else if (mem_rd_wenb == 1 && dec_rs2 == mem_rd)
+            else if (mem_rd_wenb && dec_rs2 == mem_rd)
             begin
                 dec_stall = 1; 
                 rs2_mem = 1;
             end
             
-            else if (wrb_rd_wenb == 1 && dec_rs2 == wrb_rd)
+            else if (wrb_rd_wenb && dec_rs2 == wrb_rd)
             begin
                 dec_stall = 1; 
                 rs2_wrb = 1;
-            end
-            
-        end
-       
+            end            
+        end // rs2
+
+        // default source register data values
         dec_rs1_data = dec_rdata1;
         dec_rs2_data = dec_rdata2;
         
-        if (dec_stall == 1)
+        if (dec_stall) // Stall removal
         begin
             
-            if (rs1_exe == 1)
+            if (rs1_exe)
             begin
-                if (exe_load == 0 && exe_csr == 0) 
+                if (!exe_load && !exe_csr) 
                 begin
                     dec_rs1_data = exe_result;
                     dec_stall = 0;
                 end
             end
 
-            if (rs1_mem == 1)
+            if (rs1_mem)
             begin
                 dec_rs1_data = mem_result;
                 dec_stall = 0;
             end
 
-            if (rs1_wrb == 1)
+            if (rs1_wrb)
             begin
                 dec_rs1_data = wrb_result;
                 dec_stall = 0;
             end
  
-            if (rs2_exe == 1)
+            if (rs2_exe)
             begin
-                if (exe_load == 0 && exe_csr == 0)
+                if (!exe_load && !exe_csr)
                 begin
                     dec_rs2_data = exe_result;
                     dec_stall = 0;
                 end
             end
 
-            if (rs2_mem == 1)
+            if (rs2_mem)
             begin
                 dec_rs2_data = mem_result;
                 dec_stall = 0;
             end
 
-            if (rs2_wrb == 1)
+            if (rs2_wrb)
             begin
                 dec_rs2_data = wrb_result;
                 dec_stall = 0;
             end
             
-        end
+        end // Stall removal
             
     end // bypass_stall_PROC
 
-endmodule
+endmodule // bypass_or_stall

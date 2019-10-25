@@ -25,8 +25,8 @@
 // Set the HEX_FILE localparam to the name of the hex file containing the test
 // program (deps_test.hex) or the Mandlebrot benchmark program (mbrot.hex)
 //
-//localparam        HEX_FILE         = "deps_test.hex"; // enable to run simulation
-localparam        HEX_FILE         = "mbrot.hex"; // enable to run on PYNQ board
+localparam        HEX_FILE         = "deps_test.hex"; // enable to run simulation
+//localparam        HEX_FILE         = "mbrot.hex"; // enable to run on PYNQ board
 
 
 // ============== Do not edit any definitions below this line ==================
