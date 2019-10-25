@@ -9,11 +9,6 @@
 // license from Nigel Topham.
 //
 // The entire notice above must be reproduced on all authorized copies.
-//
-////////////////////////////////////////////////////////////////////////////////
-//
-// Description:    Result bypass and stall logic for RISC-V core
-// 
 ////////////////////////////////////////////////////////////////////////////////
 
 module bypass_or_stall(
@@ -64,7 +59,12 @@ reg rs1_wrb = 0;
 reg rs2_exe = 0;
 reg rs2_mem = 0;
 reg rs2_wrb = 0;
-
+ 
+////////////////////////////////////////////////////////////////////////////////
+// Result bypass and stall logic for RISC-V core - PART A
+// The following section is written by XJ, in October 2019
+// XJ Xingjian Li, s2003300
+////////////////////////////////////////////////////////////////////////////////
 always @*
     begin : bypass_stall_PROC
         
@@ -105,7 +105,7 @@ always @*
                 rs1_wrb = 1;
             end
             
-        end
+        end // rs1
         
         ////////// rs2 //////////
         if (dec_rs2_renb == 1) // rs2 is used
@@ -133,11 +133,12 @@ always @*
                 rs2_wrb = 1;
             end
             
-        end
-       
+        end // rs2                
+        
+        // default source register data values (for PART A) 
         dec_rs1_data = dec_rdata1;
         dec_rs2_data = dec_rdata2;
-            
-    end // bypass_stall_PROC
+    
+    end // bypass_stall_PROC of PART A
 
 endmodule
