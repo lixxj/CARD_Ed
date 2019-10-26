@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Oct 23 17:16:12 2019
-| Host         : mcenroe.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
+| Date         : Sat Oct 26 01:23:26 2019
+| Host         : kasai.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
 | Device       : xc7z020clg400-1

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Oct 23 17:16:16 2019
-| Host         : mcenroe.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
+| Date         : Sat Oct 26 01:23:29 2019
+| Host         : kasai.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
 | Command      : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
 | Design       : top
 | Device       : 7z020-clg400
@@ -23,10 +23,10 @@ Id  Position  From                            To                              Co
 --  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
 1   29        [get_cells {u_cpu/u_control_unit/px_*_reg[*]}]
                                               [get_cells u_dvi_display/u_frame_buffer/*]
-                                                                              Slow             20.000       8.116     11.884
+                                                                              Slow             20.000       8.894     11.106
 2   31        [get_cells u_dvi_display/u_frame_buffer/fb_memory_reg*]
                                               [get_cells {u_cpu/u_control_unit/px_read_data_r_reg[*]}]
-                                                                              Slow              8.000       4.532      3.468
+                                                                              Slow              8.000       4.818      3.182
 
 
 2. Bus Skew Report Per Constraint
@@ -39,27 +39,27 @@ Endpoints: 865
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-cpu_clk               pixel_clk             u_dvi_display/u_frame_buffer/fb_memory_reg_1_0/ADDRARDADDR[7]
-                                                                            u_dvi_display/u_frame_buffer/fb_memory_reg_1_4/DIADI[0]
-                                                                                                            Slow         8.116     11.884
+cpu_clk               pixel_clk             u_dvi_display/u_frame_buffer/fb_memory_reg_0_11/ADDRARDADDR[15]
+                                                                            u_dvi_display/u_frame_buffer/fb_memory_reg_1_18/DIADI[0]
+                                                                                                            Slow         8.894     11.106
 
 
-Slack (MET) :             11.884ns  (requirement - actual skew)
-  Endpoint Source:        u_cpu/u_control_unit/px_address_r_reg[7]/C
+Slack (MET) :             11.106ns  (requirement - actual skew)
+  Endpoint Source:        u_cpu/u_control_unit/px_address_r_reg[15]/C
                             (rising edge-triggered cell FDCE clocked by cpu_clk)
-  Endpoint Destination:   u_dvi_display/u_frame_buffer/fb_memory_reg_1_0/ADDRARDADDR[7]
+  Endpoint Destination:   u_dvi_display/u_frame_buffer/fb_memory_reg_0_11/ADDRARDADDR[15]
                             (rising edge-triggered cell RAMB36E1 clocked by pixel_clk)
-  Reference Source:       u_cpu/u_control_unit/px_write_data_r_reg[4]/C
+  Reference Source:       u_cpu/u_control_unit/px_write_data_r_reg[18]/C
                             (rising edge-triggered cell FDCE clocked by cpu_clk)
-  Reference Destination:  u_dvi_display/u_frame_buffer/fb_memory_reg_1_4/DIADI[0]
+  Reference Destination:  u_dvi_display/u_frame_buffer/fb_memory_reg_1_18/DIADI[0]
                             (rising edge-triggered cell RAMB36E1 clocked by pixel_clk)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            20.000ns
-  Endpoint Relative Delay:    5.557ns
-  Reference Relative Delay:  -2.893ns
-  Relative CRPR:              0.753ns
+  Endpoint Relative Delay:    6.101ns
+  Reference Relative Delay:  -2.990ns
+  Relative CRPR:              0.616ns
   Uncertainty:                0.419ns
-  Actual Bus Skew:            8.116ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            8.894ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -73,14 +73,14 @@ Endpoint path:
                                                      -7.759    -5.023 r  u_cpu_clock_gen/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           2.206    -2.817    u_cpu_clock_gen/inst/clk_60MHz_cpu_clock_gen
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  u_cpu_clock_gen/inst/clkout1_buf/O
-                         net (fo=2800, routed)        1.976    -0.740    u_cpu/u_control_unit/clk
-    SLICE_X104Y107       FDCE                                         r  u_cpu/u_control_unit/px_address_r_reg[7]/C
+                         net (fo=2797, routed)        1.968    -0.748    u_cpu/u_control_unit/clk
+    SLICE_X105Y117       FDCE                                         r  u_cpu/u_control_unit/px_address_r_reg[15]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X104Y107       FDCE (Prop_fdce_C_Q)         0.478    -0.262 r  u_cpu/u_control_unit/px_address_r_reg[7]/Q
-                         net (fo=4, routed)           1.426     1.164    u_dvi_display/u_frame_buffer/px_col_address[7]
-    SLICE_X106Y99        LUT4 (Prop_lut4_I3_O)        0.295     1.459 r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_10_i_10/O
-                         net (fo=22, routed)          5.281     6.740    u_dvi_display/u_frame_buffer/fb_addr[7]
-    RAMB36_X3Y23         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_0/ADDRARDADDR[7]
+    SLICE_X105Y117       FDCE (Prop_fdce_C_Q)         0.456    -0.292 r  u_cpu/u_control_unit/px_address_r_reg[15]/Q
+                         net (fo=4, routed)           1.043     0.751    u_dvi_display/u_frame_buffer/px_row_address[7]
+    SLICE_X105Y112       LUT4 (Prop_lut4_I3_O)        0.124     0.875 r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_21_i_2/O
+                         net (fo=22, routed)          6.408     7.283    u_dvi_display/u_frame_buffer/fb_memory_reg_1_21_i_2_n_0
+    RAMB36_X2Y22         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_0_11/ADDRARDADDR[15]
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk rise edge)
@@ -91,16 +91,16 @@ Endpoint path:
                                                      -3.425    -1.813 r  u_video_clock_gen/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.725    -0.088    u_video_clock_gen/inst/pixel_clk_video_clock_gen
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     0.003 r  u_video_clock_gen/inst/clkout2_buf/O
-                         net (fo=312, routed)         1.746     1.749    u_dvi_display/u_frame_buffer/clk
-    RAMB36_X3Y23         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_0/CLKARDCLK
-                         clock pessimism              0.000     1.749    
-    RAMB36_X3Y23         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[7])
-                                                     -0.566     1.183    u_dvi_display/u_frame_buffer/fb_memory_reg_1_0
+                         net (fo=312, routed)         1.694     1.697    u_dvi_display/u_frame_buffer/clk
+    RAMB36_X2Y22         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_0_11/CLKARDCLK
+                         clock pessimism              0.000     1.697    
+    RAMB36_X2Y22         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ADDRARDADDR[15])
+                                                     -0.515     1.182    u_dvi_display/u_frame_buffer/fb_memory_reg_0_11
   -------------------------------------------------------------------
-                         data arrival                           6.740    
-                         clock arrival                          1.183    
+                         data arrival                           7.283    
+                         clock arrival                          1.182    
   -------------------------------------------------------------------
-                         relative delay                         5.557    
+                         relative delay                         6.101    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -114,12 +114,12 @@ Reference path:
                                                      -7.814    -5.272 r  u_cpu_clock_gen/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           2.012    -3.260    u_cpu_clock_gen/inst/clk_60MHz_cpu_clock_gen
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  u_cpu_clock_gen/inst/clkout1_buf/O
-                         net (fo=2800, routed)        1.782    -1.387    u_cpu/u_control_unit/clk
-    SLICE_X105Y108       FDCE                                         r  u_cpu/u_control_unit/px_write_data_r_reg[4]/C
+                         net (fo=2797, routed)        1.772    -1.397    u_cpu/u_control_unit/clk
+    SLICE_X103Y119       FDCE                                         r  u_cpu/u_control_unit/px_write_data_r_reg[18]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X105Y108       FDCE (Prop_fdce_C_Q)         0.367    -1.020 r  u_cpu/u_control_unit/px_write_data_r_reg[4]/Q
-                         net (fo=3, routed)           0.557    -0.463    u_dvi_display/u_frame_buffer/px_write_data[4]
-    RAMB36_X5Y21         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_4/DIADI[0]
+    SLICE_X103Y119       FDCE (Prop_fdce_C_Q)         0.367    -1.030 r  u_cpu/u_control_unit/px_write_data_r_reg[18]/Q
+                         net (fo=3, routed)           0.452    -0.577    u_dvi_display/u_frame_buffer/px_write_data[18]
+    RAMB36_X5Y24         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_18/DIADI[0]
   -------------------------------------------------------------------    -------------------
 
                          (clock pixel_clk rise edge)
@@ -130,16 +130,16 @@ Reference path:
                                                      -3.793    -1.987 r  u_video_clock_gen/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.889    -0.098    u_video_clock_gen/inst/pixel_clk_video_clock_gen
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     0.003 r  u_video_clock_gen/inst/clkout2_buf/O
-                         net (fo=312, routed)         2.021     2.024    u_dvi_display/u_frame_buffer/clk
-    RAMB36_X5Y21         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_4/CLKARDCLK
-                         clock pessimism              0.000     2.024    
-    RAMB36_X5Y21         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[0])
-                                                      0.405     2.429    u_dvi_display/u_frame_buffer/fb_memory_reg_1_4
+                         net (fo=312, routed)         2.004     2.007    u_dvi_display/u_frame_buffer/clk
+    RAMB36_X5Y24         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_18/CLKARDCLK
+                         clock pessimism              0.000     2.007    
+    RAMB36_X5Y24         RAMB36E1 (Hold_ramb36e1_CLKARDCLK_DIADI[0])
+                                                      0.405     2.412    u_dvi_display/u_frame_buffer/fb_memory_reg_1_18
   -------------------------------------------------------------------
-                         data arrival                          -0.463    
-                         clock arrival                          2.429    
+                         data arrival                          -0.577    
+                         clock arrival                          2.412    
   -------------------------------------------------------------------
-                         relative delay                        -2.893    
+                         relative delay                        -2.990    
 
 
 
@@ -150,27 +150,27 @@ Endpoints: 16
 
 From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
-pixel_clk             cpu_clk               u_cpu/u_control_unit/px_read_data_r_reg[9]/D
-                                                                            u_cpu/u_control_unit/px_read_data_r_reg[13]/D
-                                                                                                            Slow         4.532      3.468
+pixel_clk             cpu_clk               u_cpu/u_control_unit/px_read_data_r_reg[11]/D
+                                                                            u_cpu/u_control_unit/px_read_data_r_reg[15]/D
+                                                                                                            Slow         4.818      3.182
 
 
-Slack (MET) :             3.468ns  (requirement - actual skew)
-  Endpoint Source:        u_dvi_display/u_frame_buffer/fb_memory_reg_0_9/CLKARDCLK
+Slack (MET) :             3.182ns  (requirement - actual skew)
+  Endpoint Source:        u_dvi_display/u_frame_buffer/fb_memory_reg_0_11/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by pixel_clk)
-  Endpoint Destination:   u_cpu/u_control_unit/px_read_data_r_reg[9]/D
+  Endpoint Destination:   u_cpu/u_control_unit/px_read_data_r_reg[11]/D
                             (rising edge-triggered cell FDCE clocked by cpu_clk)
-  Reference Source:       u_dvi_display/u_frame_buffer/fb_memory_reg_1_13/CLKARDCLK
+  Reference Source:       u_dvi_display/u_frame_buffer/fb_memory_reg_1_15/CLKARDCLK
                             (rising edge-triggered cell RAMB36E1 clocked by pixel_clk)
-  Reference Destination:  u_cpu/u_control_unit/px_read_data_r_reg[13]/D
+  Reference Destination:  u_cpu/u_control_unit/px_read_data_r_reg[15]/D
                             (rising edge-triggered cell FDCE clocked by cpu_clk)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            8.000ns
-  Endpoint Relative Delay:    9.558ns
-  Reference Relative Delay:   4.916ns
-  Relative CRPR:              0.584ns
+  Endpoint Relative Delay:    9.629ns
+  Reference Relative Delay:   4.669ns
+  Relative CRPR:              0.616ns
   Uncertainty:                0.474ns
-  Actual Bus Skew:            4.532ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            4.818ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -183,18 +183,18 @@ Endpoint path:
                                                      -3.793    -1.987 r  u_video_clock_gen/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.889    -0.098    u_video_clock_gen/inst/pixel_clk_video_clock_gen
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101     0.003 r  u_video_clock_gen/inst/clkout2_buf/O
-                         net (fo=312, routed)         1.839     1.842    u_dvi_display/u_frame_buffer/clk
-    RAMB36_X4Y8          RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_0_9/CLKARDCLK
+                         net (fo=312, routed)         1.884     1.887    u_dvi_display/u_frame_buffer/clk
+    RAMB36_X2Y22         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_0_11/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X4Y8          RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
-                                                      2.872     4.714 r  u_dvi_display/u_frame_buffer/fb_memory_reg_0_9/CASCADEOUTA
-                         net (fo=1, routed)           0.065     4.780    u_dvi_display/u_frame_buffer/fb_memory_reg_0_9_n_0
-    RAMB36_X4Y9          RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
-                                                      0.425     5.205 r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_9/DOADO[0]
-                         net (fo=2, routed)           2.918     8.123    u_cpu/u_control_unit/px_read_data[9]
-    SLICE_X96Y107        LUT6 (Prop_lut6_I0_O)        0.124     8.247 r  u_cpu/u_control_unit/px_read_data_r[9]_i_1/O
-                         net (fo=1, routed)           0.000     8.247    u_cpu/u_control_unit/px_read_data_nxt[9]
-    SLICE_X96Y107        FDCE                                         r  u_cpu/u_control_unit/px_read_data_r_reg[9]/D
+    RAMB36_X2Y22         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_CASCADEOUTA)
+                                                      2.872     4.759 r  u_dvi_display/u_frame_buffer/fb_memory_reg_0_11/CASCADEOUTA
+                         net (fo=1, routed)           0.065     4.825    u_dvi_display/u_frame_buffer/fb_memory_reg_0_11_n_0
+    RAMB36_X2Y23         RAMB36E1 (Prop_ramb36e1_CASCADEINA_DOADO[0])
+                                                      0.425     5.250 r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_11/DOADO[0]
+                         net (fo=2, routed)           2.940     8.190    u_cpu/u_control_unit/px_read_data[11]
+    SLICE_X98Y116        LUT6 (Prop_lut6_I0_O)        0.124     8.314 r  u_cpu/u_control_unit/px_read_data_r[11]_i_1/O
+                         net (fo=1, routed)           0.000     8.314    u_cpu/u_control_unit/px_read_data_nxt[11]
+    SLICE_X98Y116        FDCE                                         r  u_cpu/u_control_unit/px_read_data_r_reg[11]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock cpu_clk rise edge)    0.000     0.000 r  
@@ -206,15 +206,15 @@ Endpoint path:
                                                      -7.814    -5.272 r  u_cpu_clock_gen/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           2.012    -3.260    u_cpu_clock_gen/inst/clk_60MHz_cpu_clock_gen
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    -3.169 r  u_cpu_clock_gen/inst/clkout1_buf/O
-                         net (fo=2800, routed)        1.781    -1.388    u_cpu/u_control_unit/clk
-    SLICE_X96Y107        FDCE                                         r  u_cpu/u_control_unit/px_read_data_r_reg[9]/C
-                         clock pessimism              0.000    -1.388    
-    SLICE_X96Y107        FDCE (Setup_fdce_C_D)        0.077    -1.311    u_cpu/u_control_unit/px_read_data_r_reg[9]
+                         net (fo=2797, routed)        1.775    -1.394    u_cpu/u_control_unit/clk
+    SLICE_X98Y116        FDCE                                         r  u_cpu/u_control_unit/px_read_data_r_reg[11]/C
+                         clock pessimism              0.000    -1.394    
+    SLICE_X98Y116        FDCE (Setup_fdce_C_D)        0.079    -1.315    u_cpu/u_control_unit/px_read_data_r_reg[11]
   -------------------------------------------------------------------
-                         data arrival                           8.247    
-                         clock arrival                         -1.311    
+                         data arrival                           8.314    
+                         clock arrival                         -1.315    
   -------------------------------------------------------------------
-                         relative delay                         9.558    
+                         relative delay                         9.629    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -227,15 +227,15 @@ Reference path:
                                                      -3.425    -1.813 r  u_video_clock_gen/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.725    -0.088    u_video_clock_gen/inst/pixel_clk_video_clock_gen
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     0.003 r  u_video_clock_gen/inst/clkout2_buf/O
-                         net (fo=312, routed)         1.813     1.816    u_dvi_display/u_frame_buffer/clk
-    RAMB36_X4Y25         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_13/CLKARDCLK
+                         net (fo=312, routed)         1.822     1.825    u_dvi_display/u_frame_buffer/clk
+    RAMB36_X5Y26         RAMB36E1                                     r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_15/CLKARDCLK
   -------------------------------------------------------------------    -------------------
-    RAMB36_X4Y25         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[0])
-                                                      1.353     3.169 r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_13/DOADO[0]
-                         net (fo=2, routed)           1.173     4.341    u_cpu/u_control_unit/px_read_data[13]
-    SLICE_X99Y113        LUT6 (Prop_lut6_I0_O)        0.100     4.441 r  u_cpu/u_control_unit/px_read_data_r[13]_i_1/O
-                         net (fo=1, routed)           0.000     4.441    u_cpu/u_control_unit/px_read_data_nxt[13]
-    SLICE_X99Y113        FDCE                                         r  u_cpu/u_control_unit/px_read_data_r_reg[13]/D
+    RAMB36_X5Y26         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOADO[0])
+                                                      1.353     3.178 r  u_dvi_display/u_frame_buffer/fb_memory_reg_1_15/DOADO[0]
+                         net (fo=2, routed)           0.910     4.087    u_cpu/u_control_unit/px_read_data[15]
+    SLICE_X105Y119       LUT6 (Prop_lut6_I0_O)        0.100     4.187 r  u_cpu/u_control_unit/px_read_data_r[15]_i_2/O
+                         net (fo=1, routed)           0.000     4.187    u_cpu/u_control_unit/px_read_data_nxt[15]
+    SLICE_X105Y119       FDCE                                         r  u_cpu/u_control_unit/px_read_data_r_reg[15]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock cpu_clk rise edge)    0.000     0.000 r  
@@ -247,15 +247,15 @@ Reference path:
                                                      -7.759    -5.023 r  u_cpu_clock_gen/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           2.206    -2.817    u_cpu_clock_gen/inst/clk_60MHz_cpu_clock_gen
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101    -2.716 r  u_cpu_clock_gen/inst/clkout1_buf/O
-                         net (fo=2800, routed)        1.972    -0.744    u_cpu/u_control_unit/clk
-    SLICE_X99Y113        FDCE                                         r  u_cpu/u_control_unit/px_read_data_r_reg[13]/C
-                         clock pessimism              0.000    -0.744    
-    SLICE_X99Y113        FDCE (Hold_fdce_C_D)         0.270    -0.474    u_cpu/u_control_unit/px_read_data_r_reg[13]
+                         net (fo=2797, routed)        1.965    -0.751    u_cpu/u_control_unit/clk
+    SLICE_X105Y119       FDCE                                         r  u_cpu/u_control_unit/px_read_data_r_reg[15]/C
+                         clock pessimism              0.000    -0.751    
+    SLICE_X105Y119       FDCE (Hold_fdce_C_D)         0.270    -0.481    u_cpu/u_control_unit/px_read_data_r_reg[15]
   -------------------------------------------------------------------
-                         data arrival                           4.441    
-                         clock arrival                         -0.474    
+                         data arrival                           4.187    
+                         clock arrival                         -0.481    
   -------------------------------------------------------------------
-                         relative delay                         4.916    
+                         relative delay                         4.669    
 
 
 

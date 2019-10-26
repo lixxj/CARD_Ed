@@ -136,7 +136,8 @@ always @*
         dec_rs1_data = dec_rdata1;
         dec_rs2_data = dec_rdata2;
         
-        if (dec_stall) // Stall removal
+        //if (0) // uncomment to run partA only
+        if (dec_stall) // PartB: Stall removal
         begin
             
             if (rs1_exe)
