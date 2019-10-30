@@ -17,9 +17,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23462 
+INFO: Helper process launched with PID 8424 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1549.000 ; gain = 87.773 ; free physical = 4585 ; free virtual = 18895
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1549.008 ; gain = 87.773 ; free physical = 7055 ; free virtual = 21088
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/hdl/top.v:14]
 	Parameter HEX_FILE bound to: deps_test.hex - type: string 
@@ -369,10 +369,10 @@ INFO: [Synth 8-6157] synthesizing module 'ssd_driver' [/afs/inf.ed.ac.uk/user/s2
 INFO: [Synth 8-6155] done synthesizing module 'ssd_driver' (1#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/hdl/ssd_driver.v:23]
 INFO: [Synth 8-6157] synthesizing module 'resync' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/hdl/resync.v:25]
 INFO: [Synth 8-6155] done synthesizing module 'resync' (2#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/hdl/resync.v:25]
-INFO: [Synth 8-6157] synthesizing module 'cpu_clock_gen' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-23439-kasai.inf.ed.ac.uk/realtime/cpu_clock_gen_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'cpu_clock_gen' (3#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-23439-kasai.inf.ed.ac.uk/realtime/cpu_clock_gen_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'video_clock_gen' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-23439-kasai.inf.ed.ac.uk/realtime/video_clock_gen_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'video_clock_gen' (4#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-23439-kasai.inf.ed.ac.uk/realtime/video_clock_gen_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpu_clock_gen' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-8397-uhrmann.inf.ed.ac.uk/realtime/cpu_clock_gen_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpu_clock_gen' (3#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-8397-uhrmann.inf.ed.ac.uk/realtime/cpu_clock_gen_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'video_clock_gen' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-8397-uhrmann.inf.ed.ac.uk/realtime/video_clock_gen_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'video_clock_gen' (4#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-8397-uhrmann.inf.ed.ac.uk/realtime/video_clock_gen_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'cpu' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/hdl/cpu.v:20]
 	Parameter HEX_FILE bound to: deps_test.hex - type: string 
 	Parameter ROM_WIDTH bound to: 32 - type: integer 
@@ -3238,8 +3238,8 @@ INFO: [Synth 8-6157] synthesizing module 'frame_buffer' [/afs/inf.ed.ac.uk/user/
 	Parameter PX_RD_WAIT bound to: 2'b01 
 	Parameter PX_RD_READY bound to: 2'b10 
 INFO: [Synth 8-6155] done synthesizing module 'frame_buffer' (21#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/hdl/frame_buffer.v:21]
-INFO: [Synth 8-6157] synthesizing module 'rgb2dvi_0' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-23439-kasai.inf.ed.ac.uk/realtime/rgb2dvi_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rgb2dvi_0' (22#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-23439-kasai.inf.ed.ac.uk/realtime/rgb2dvi_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rgb2dvi_0' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-8397-uhrmann.inf.ed.ac.uk/realtime/rgb2dvi_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rgb2dvi_0' (22#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/.Xil/Vivado-8397-uhrmann.inf.ed.ac.uk/realtime/rgb2dvi_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'msec_timer' [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/hdl/msec_timer.v:18]
 	Parameter MSEC_LIMIT bound to: 16'b1001110000111111 
 INFO: [Synth 8-6155] done synthesizing module 'msec_timer' (23#1) [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/hdl/msec_timer.v:18]
@@ -3249,105 +3249,92 @@ WARNING: [Synth 8-3331] design control_unit has unconnected port csr_commit_op
 WARNING: [Synth 8-3331] design control_unit has unconnected port commit_ecall
 WARNING: [Synth 8-3331] design control_unit has unconnected port step_cycle
 WARNING: [Synth 8-3331] design control_unit has unconnected port wrb_restart
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[31]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[30]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[29]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[28]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[27]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[26]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[25]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[24]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[23]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[22]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[21]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[20]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[19]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[18]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[17]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[16]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[15]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[14]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[13]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[12]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[11]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[10]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[9]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[8]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[7]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[6]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[5]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[4]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[3]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[2]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[1]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port exe_result[0]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[31]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[30]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[29]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[28]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[27]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[26]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[25]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[24]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[23]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[22]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[21]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[20]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[19]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[18]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[17]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[16]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[15]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[14]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[13]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[12]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[11]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[10]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[9]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[8]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[7]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[6]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[5]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[4]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[3]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[2]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[1]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port mem_result[0]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[31]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[30]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[29]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[28]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[27]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[26]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[25]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[24]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[23]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[22]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[21]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[20]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[19]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[18]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[17]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[16]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[15]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[14]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[13]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[12]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[11]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[10]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[9]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[8]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[7]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[6]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[5]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[4]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[3]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[2]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[1]
-WARNING: [Synth 8-3331] design bypass_or_stall has unconnected port wrb_result[0]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design exec_unit has unconnected port run_cmd_mode[1]
+WARNING: [Synth 8-3331] design exec_unit has unconnected port run_cmd_mode[0]
+WARNING: [Synth 8-3331] design exec_unit has unconnected port fch_pc[1]
+WARNING: [Synth 8-3331] design exec_unit has unconnected port fch_pc[0]
+WARNING: [Synth 8-3331] design ras has unconnected port wrb_link_addr[31]
+WARNING: [Synth 8-3331] design ras has unconnected port fch_link_addr[31]
+WARNING: [Synth 8-3331] design predictor_state has unconnected port reset
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[31]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[30]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[29]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[28]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[27]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[26]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[25]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[24]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[23]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[22]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[21]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[20]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[19]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[18]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[17]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[16]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[15]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[14]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[13]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[12]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[11]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[10]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[9]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_nxt[0]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_r[8]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_r[7]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_r[6]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_r[5]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_r[4]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_r[3]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_r[2]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_r[1]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port fch_pc_r[0]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port wrb_pc[0]
+WARNING: [Synth 8-3331] design branch_cache has unconnected port wrb_target[0]
+WARNING: [Synth 8-3331] design branch_predictor has unconnected port wrb_index[2]
+WARNING: [Synth 8-3331] design branch_predictor has unconnected port wrb_index[1]
+WARNING: [Synth 8-3331] design branch_predictor has unconnected port wrb_index[0]
+WARNING: [Synth 8-3331] design branch_predictor has unconnected port wrb_mispred_dir
+WARNING: [Synth 8-3331] design fetch_unit has unconnected port wrb_restart_pc[1]
+WARNING: [Synth 8-3331] design fetch_unit has unconnected port wrb_restart_pc[0]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[31]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[30]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[29]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[28]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[27]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[26]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[25]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[24]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[23]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[22]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[21]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[20]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[19]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[18]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[17]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[16]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[15]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[14]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[13]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[12]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[11]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[10]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[9]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[8]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[7]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[6]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[5]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[4]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[3]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[2]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[1]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_data[0]
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_in_valid
+WARNING: [Synth 8-3331] design cpu has unconnected port hlnk_out_accept
+WARNING: [Synth 8-3331] design top has unconnected port leds[3]
+WARNING: [Synth 8-3331] design top has unconnected port leds[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1715.766 ; gain = 254.539 ; free physical = 4540 ; free virtual = 18868
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1715.773 ; gain = 254.539 ; free physical = 6995 ; free virtual = 21049
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3360,10 +3347,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1715.766 ; gain = 254.539 ; free physical = 4551 ; free virtual = 18877
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1715.773 ; gain = 254.539 ; free physical = 7009 ; free virtual = 21059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1715.766 ; gain = 254.539 ; free physical = 4551 ; free virtual = 18877
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1715.773 ; gain = 254.539 ; free physical = 7009 ; free virtual = 21059
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -3443,24 +3430,24 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1994.184 ; gain = 0.000 ; free physical = 4175 ; free virtual = 18506
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1995.191 ; gain = 0.000 ; free physical = 6630 ; free virtual = 20760
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1994.184 ; gain = 0.000 ; free physical = 4176 ; free virtual = 18506
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1995.191 ; gain = 0.000 ; free physical = 6630 ; free virtual = 20760
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1994.184 ; gain = 0.000 ; free physical = 4175 ; free virtual = 18506
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1994.184 ; gain = 0.000 ; free physical = 4176 ; free virtual = 18506
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1995.191 ; gain = 0.000 ; free physical = 6630 ; free virtual = 20760
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1995.191 ; gain = 0.000 ; free physical = 6630 ; free virtual = 20760
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1994.184 ; gain = 532.957 ; free physical = 4364 ; free virtual = 18684
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1995.191 ; gain = 533.957 ; free physical = 6751 ; free virtual = 20883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1994.184 ; gain = 532.957 ; free physical = 4364 ; free virtual = 18684
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1995.191 ; gain = 533.957 ; free physical = 6751 ; free virtual = 20883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -3487,7 +3474,7 @@ Applied set_property DONT_TOUCH = true for u_dvi_display/u_rgb2dvi. (constraint 
 Applied set_property DONT_TOUCH = true for u_video_clock_gen. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for u_cpu_clock_gen. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1994.184 ; gain = 532.957 ; free physical = 4364 ; free virtual = 18684
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 1995.191 ; gain = 533.957 ; free physical = 6750 ; free virtual = 20882
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "fch_ras_r_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "fch_ras_r_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -3517,7 +3504,7 @@ INFO: [Synth 8-6430] The Block RAM bc_ram_reg may get memory collision error if 
 INFO: [Synth 8-6430] The Block RAM ps_ram_reg may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
 INFO: [Synth 8-5583] The signal ps_ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1994.188 ; gain = 532.961 ; free physical = 4356 ; free virtual = 18674
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:28 . Memory (MB): peak = 1995.195 ; gain = 533.961 ; free physical = 6741 ; free virtual = 20870
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3569,7 +3556,7 @@ Detailed RTL Component Info :
 	   2 Input    256 Bit        Muxes := 3     
 	   2 Input     65 Bit        Muxes := 2     
 	   3 Input     65 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 14    
+	   2 Input     32 Bit        Muxes := 24    
 	  11 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 3     
 	   4 Input     32 Bit        Muxes := 2     
@@ -3597,7 +3584,7 @@ Detailed RTL Component Info :
 	   3 Input      2 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 58    
+	   2 Input      1 Bit        Muxes := 61    
 	  12 Input      1 Bit        Muxes := 1     
 	  11 Input      1 Bit        Muxes := 11    
 	   3 Input      1 Bit        Muxes := 13    
@@ -3726,7 +3713,8 @@ Detailed RTL Component Info :
 Module bypass_or_stall 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 9     
+	   2 Input     32 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 12    
 	   4 Input      1 Bit        Muxes := 1     
 Module store_queue 
 Detailed RTL Component Info : 
@@ -3989,7 +3977,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cpu/u_f
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cpu/u_fetch_unit/u_branch_predictor/u_ras/\wrb_ras_r_reg[1][2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cpu/u_fetch_unit/u_branch_predictor/u_ras/\wrb_ras_r_reg[0][2] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1994.188 ; gain = 532.961 ; free physical = 4270 ; free virtual = 18634
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 1995.195 ; gain = 533.961 ; free physical = 6673 ; free virtual = 20827
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4069,7 +4057,7 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'u_cpu_clock_gen/clk_60MHz
 INFO: [Synth 8-5578] Moved timing constraint from pin 'u_cpu_clock_gen/clk_75MHz' to pin 'u_cpu_clock_gen/bbstub_clk_75MHz/O'
 INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 2012.180 ; gain = 550.953 ; free physical = 4100 ; free virtual = 18467
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:59 . Memory (MB): peak = 2012.188 ; gain = 550.953 ; free physical = 6497 ; free virtual = 20665
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -4132,7 +4120,7 @@ INFO: [Synth 8-6837] The timing for the instance u_dvi_display/u_frame_buffer/fb
 INFO: [Synth 8-6837] The timing for the instance u_dvi_display/u_frame_buffer/fb_memory_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance u_dvi_display/u_frame_buffer/fb_memory_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:58 . Memory (MB): peak = 2041.219 ; gain = 579.992 ; free physical = 4093 ; free virtual = 18457
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:01:03 . Memory (MB): peak = 2042.227 ; gain = 580.992 ; free physical = 6487 ; free virtual = 20655
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4153,7 +4141,7 @@ INFO: [Synth 8-6064] Net n_0_0 is driving 64 big block pins (URAM, BRAM and DSP 
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 2041.223 ; gain = 579.996 ; free physical = 4095 ; free virtual = 18457
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 2042.230 ; gain = 580.996 ; free physical = 6488 ; free virtual = 20656
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -4166,7 +4154,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 2041.223 ; gain = 579.996 ; free physical = 4095 ; free virtual = 18457
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 2042.230 ; gain = 580.996 ; free physical = 6488 ; free virtual = 20656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -4178,7 +4166,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 2041.223 ; gain = 579.996 ; free physical = 4095 ; free virtual = 18457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 2042.230 ; gain = 580.996 ; free physical = 6488 ; free virtual = 20656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -4206,12 +4194,12 @@ Report Cell Usage:
 |7     |DSP48E1_2       |     1|
 |8     |DSP48E1_3       |     1|
 |9     |LUT1            |    13|
-|10    |LUT2            |   227|
-|11    |LUT3            |   602|
-|12    |LUT4            |   434|
-|13    |LUT5            |   410|
-|14    |LUT6            |  1589|
-|15    |MUXF7           |   233|
+|10    |LUT2            |   220|
+|11    |LUT3            |   611|
+|12    |LUT4            |   440|
+|13    |LUT5            |   531|
+|14    |LUT6            |  1611|
+|15    |MUXF7           |   224|
 |16    |MUXF8           |    72|
 |17    |RAMB18E1        |     1|
 |18    |RAMB18E1_1      |     4|
@@ -4231,51 +4219,51 @@ Report Instance Areas:
 +------+--------------------------+-----------------+------+
 |      |Instance                  |Module           |Cells |
 +------+--------------------------+-----------------+------+
-|1     |top                       |                 |  6736|
+|1     |top                       |                 |  6878|
 |2     |  u_ssd_driver            |ssd_driver       |    65|
 |3     |  u_resync                |resync           |    15|
-|4     |  u_cpu                   |cpu              |  6250|
+|4     |  u_cpu                   |cpu              |  6392|
 |5     |    u_fetch_unit          |fetch_unit       |  1496|
 |6     |      u_branch_predictor  |branch_predictor |  1263|
 |7     |        u_branch_cache    |branch_cache     |   349|
 |8     |        u_predictor_state |predictor_state  |    19|
 |9     |        u_ras             |ras              |   841|
-|10    |    u_exec_unit           |exec_unit        |  4327|
+|10    |    u_exec_unit           |exec_unit        |  4468|
 |11    |      u_decoder           |decoder          |    71|
 |12    |      u_regfile           |regfile          |  1865|
 |13    |      u_alu               |alu              |   534|
 |14    |      u_divider           |divider          |   432|
-|15    |      u_bypass_or_stall   |bypass_or_stall  |    14|
+|15    |      u_bypass_or_stall   |bypass_or_stall  |   161|
 |16    |      u_store_queue       |store_queue      |   199|
 |17    |      u_dccm_ram          |dccm_ram         |     4|
-|18    |    u_control_unit        |control_unit     |   427|
+|18    |    u_control_unit        |control_unit     |   428|
 |19    |  u_dvi_display           |dvi_display      |   378|
 |20    |    u_vga_control         |vga_control      |   160|
 |21    |    u_frame_buffer        |frame_buffer     |   125|
 |22    |    u_msec_timer          |msec_timer       |    83|
 +------+--------------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 2041.223 ; gain = 579.996 ; free physical = 4095 ; free virtual = 18457
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 2042.230 ; gain = 580.996 ; free physical = 6488 ; free virtual = 20656
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 2041.223 ; gain = 301.578 ; free physical = 4162 ; free virtual = 18524
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 2041.227 ; gain = 579.996 ; free physical = 4184 ; free virtual = 18535
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 2042.230 ; gain = 301.578 ; free physical = 6550 ; free virtual = 20719
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 2042.234 ; gain = 580.996 ; free physical = 6561 ; free virtual = 20729
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 521 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 512 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2041.227 ; gain = 0.000 ; free physical = 4116 ; free virtual = 18467
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2042.234 ; gain = 0.000 ; free physical = 6486 ; free virtual = 20655
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-315 Infos, 219 Warnings, 0 Critical Warnings and 0 Errors encountered.
+314 Infos, 207 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:01 . Memory (MB): peak = 2041.227 ; gain = 591.680 ; free physical = 4213 ; free virtual = 18553
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2041.227 ; gain = 0.000 ; free physical = 4213 ; free virtual = 18553
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:01:06 . Memory (MB): peak = 2042.234 ; gain = 592.680 ; free physical = 6570 ; free virtual = 20739
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2042.234 ; gain = 0.000 ; free physical = 6570 ; free virtual = 20739
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/proj/RV32IM_PYNQ_Z2.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Oct 26 01:21:44 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 29 14:31:32 2019...
