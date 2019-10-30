@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Tue Oct 29 14:33:23 2019
-| Host             : uhrmann.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
+| Date             : Wed Oct 30 16:46:13 2019
+| Host             : sharapova.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7z020clg400-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.545        |
+| Total On-Chip Power (W)  | 0.558        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.429        |
+| Dynamic (W)              | 0.442        |
 | Device Static (W)        | 0.116        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 78.7         |
-| Junction Temperature (C) | 31.3         |
+| Max Ambient (C)          | 78.6         |
+| Junction Temperature (C) | 31.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.009 |       10 |       --- |             --- |
-| Slice Logic    |     0.007 |     7179 |       --- |             --- |
-|   LUT as Logic |     0.006 |     3136 |     53200 |            5.89 |
-|   CARRY4       |    <0.001 |      158 |     13300 |            1.19 |
-|   Register     |    <0.001 |     3042 |    106400 |            2.86 |
-|   F7/F8 Muxes  |    <0.001 |      296 |     53200 |            0.56 |
+| Clocks         |     0.010 |       10 |       --- |             --- |
+| Slice Logic    |     0.021 |     8457 |       --- |             --- |
+|   LUT as Logic |     0.019 |     4044 |     53200 |            7.60 |
+|   F7/F8 Muxes  |    <0.001 |      654 |     53200 |            1.23 |
+|   CARRY4       |    <0.001 |      162 |     13300 |            1.22 |
+|   Register     |    <0.001 |     3045 |    106400 |            2.86 |
 |   Others       |     0.000 |       62 |       --- |             --- |
-| Signals        |     0.009 |     6013 |       --- |             --- |
-| Block RAM      |     0.042 |     51.5 |       140 |           36.79 |
-| MMCM           |     0.225 |        2 |         4 |           50.00 |
+| Signals        |     0.026 |     6545 |       --- |             --- |
+| Block RAM      |     0.043 |     51.5 |       140 |           36.79 |
+| MMCM           |     0.205 |        2 |         4 |           50.00 |
 | DSPs           |    <0.001 |        4 |       220 |            1.82 |
 | I/O            |     0.137 |       27 |       125 |           21.60 |
 | Static Power   |     0.116 |          |           |                 |
-| Total          |     0.545 |          |           |                 |
+| Total          |     0.558 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,8 +75,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.075 |       0.065 |      0.010 |
-| Vccaux    |       1.800 |     0.136 |       0.125 |      0.011 |
+| Vccint    |       1.000 |     0.108 |       0.098 |      0.010 |
+| Vccaux    |       1.800 |     0.125 |       0.114 |      0.011 |
 | Vcco33    |       3.300 |     0.042 |       0.041 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -141,9 +141,9 @@ Table of Contents
 | clk_75MHz_cpu_clock_gen  | u_cpu_clock_gen/inst/clk_75MHz                    |            13.3 |
 | clk_75MHz_cpu_clock_gen  | u_cpu_clock_gen/inst/clk_75MHz_cpu_clock_gen      |            13.3 |
 | clk_in                   | clk_in                                            |             8.0 |
-| clkfbout_cpu_clock_gen   | u_cpu_clock_gen/inst/clkfbout_cpu_clock_gen       |            40.0 |
+| clkfbout_cpu_clock_gen   | u_cpu_clock_gen/inst/clkfbout_cpu_clock_gen       |            48.0 |
 | clkfbout_video_clock_gen | u_video_clock_gen/inst/clkfbout_video_clock_gen   |            40.0 |
-| cpu_clk                  | u_cpu_clock_gen/inst/clk_60MHz_cpu_clock_gen      |            16.7 |
+| cpu_clk                  | u_cpu_clock_gen/inst/clk_60MHz_cpu_clock_gen      |            14.1 |
 | pixel_clk                | u_video_clock_gen/inst/pixel_clk_video_clock_gen  |            25.0 |
 | serial_clk               | u_video_clock_gen/inst/serial_clk_video_clock_gen |             5.0 |
 +--------------------------+---------------------------------------------------+-----------------+
@@ -158,19 +158,20 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| top                      |     0.429 |
-|   u_cpu                  |     0.024 |
-|     u_exec_unit          |     0.014 |
-|       u_alu              |     0.001 |
+| top                      |     0.442 |
+|   u_cpu                  |     0.057 |
+|     u_control_unit       |     0.001 |
+|     u_exec_unit          |     0.020 |
+|       u_alu              |     0.002 |
 |       u_dccm_ram         |     0.001 |
-|       u_divider          |     0.001 |
-|       u_regfile          |     0.004 |
-|     u_fetch_unit         |     0.009 |
-|       u_branch_predictor |     0.007 |
-|   u_cpu_clock_gen        |     0.120 |
-|     inst                 |     0.120 |
+|       u_divider          |     0.002 |
+|       u_regfile          |     0.005 |
+|     u_fetch_unit         |     0.036 |
+|       u_branch_predictor |     0.009 |
+|   u_cpu_clock_gen        |     0.100 |
+|     inst                 |     0.100 |
 |   u_dvi_display          |     0.175 |
-|     u_frame_buffer       |     0.039 |
+|     u_frame_buffer       |     0.038 |
 |     u_rgb2dvi            |     0.136 |
 |       U0                 |     0.136 |
 |   u_video_clock_gen      |     0.106 |

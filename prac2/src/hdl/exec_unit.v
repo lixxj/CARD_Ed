@@ -512,9 +512,9 @@ always @*
     BEQ_OPC:      br_is_taken = exe_reg1_r == exe_reg2_r;
     BNE_OPC:      br_is_taken = exe_reg1_r != exe_reg2_r;
     BLT_OPC:      br_is_taken = $signed(exe_reg1_r) < $signed(exe_reg2_r);
-    BGE_OPC:      br_is_taken = !($signed(exe_reg1_r) < $signed(exe_reg2_r));
-    BLTU_OPC:     br_is_taken =   $unsigned(exe_reg1_r) < $unsigned(exe_reg2_r);
-    BGEU_OPC:     br_is_taken = !($unsigned(exe_reg1_r) < $unsigned(exe_reg2_r));
+    BGE_OPC:      br_is_taken = ($signed(exe_reg1_r) >= $signed(exe_reg2_r));
+    BLTU_OPC:     br_is_taken =  $unsigned(exe_reg1_r) < $unsigned(exe_reg2_r);
+    BGEU_OPC:     br_is_taken = ($unsigned(exe_reg1_r) >= $unsigned(exe_reg2_r));
     default:      br_is_taken = 1'b0;
   endcase
 

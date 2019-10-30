@@ -10,6 +10,3 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==rgb2dvi_0 || OR
 
 # IP: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/ip/video_clock_gen/video_clock_gen.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==video_clock_gen || ORIG_REF_NAME==video_clock_gen} -quiet] -quiet
-
-# IP: /afs/inf.ed.ac.uk/user/s20/s2003300/Desktop/Coursework/CARD/prac2/src/ip/cpu_clock_gen/cpu_clock_gen.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cpu_clock_gen || ORIG_REF_NAME==cpu_clock_gen} -quiet] -quiet

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Oct 29 14:33:21 2019
-| Host         : uhrmann.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
+| Date         : Wed Oct 30 16:46:10 2019
+| Host         : sharapova.inf.ed.ac.uk running 64-bit Scientific Linux release 7.6 (Nitrogen)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
 | Device       : xc7z020clg400-1
@@ -28,6 +28,7 @@ Table of Contents
 | Rule      | Severity | Description                                                             | Violations |
 +-----------+----------+-------------------------------------------------------------------------+------------+
 | SYNTH-4   | Warning  | Shallow depth for a dedicated block RAM                                 | 1          |
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal                              | 1          |
 | SYNTH-10  | Warning  | Wide multiplier                                                         | 4          |
 | SYNTH-16  | Warning  | Address collision                                                       | 2          |
 | TIMING-2  | Warning  | Invalid primary clock source pin                                        | 1          |
@@ -35,7 +36,6 @@ Table of Contents
 | TIMING-9  | Warning  | Unknown CDC Logic                                                       | 1          |
 | TIMING-10 | Warning  | Missing property on synchronizer                                        | 1          |
 | TIMING-24 | Warning  | Overridden Max delay datapath only                                      | 5          |
-| TIMING-34 | Warning  | Bus skew constraint with unrealistic value                              | 1          |
 | TIMING-39 | Warning  | Invalid bus skew constraint on paths that have too many levels of logic | 1          |
 | XDCB-5    | Warning  | Runtime inefficient way to find pin objects                             | 3          |
 +-----------+----------+-------------------------------------------------------------------------+------------+
@@ -45,6 +45,11 @@ Table of Contents
 SYNTH-4#1 Warning
 Shallow depth for a dedicated block RAM  
 The instance u_cpu/u_fetch_unit/u_branch_predictor/u_predictor_state/ps_ram_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason: The depth (8 address bits) is shallow. Please use attribute (* ram_style = "distributed" *)  to instruct Vivado to infer distributed LUT RAM.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance u_cpu/u_fetch_unit/u_branch_predictor/u_branch_cache/bc_ram_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
 Related violations: <none>
 
 SYNTH-10#1 Warning
@@ -120,11 +125,6 @@ Related violations: <none>
 TIMING-24#5 Warning
 Overridden Max delay datapath only  
 A set_clock_groups or a set_false path (see constraint position 15 in the Timing Constraints window in Vivado IDE) between clocks cpu_clk and pixel_clk overrides a set_max_delay -datapath_only (position 28). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-34#1 Warning
-Bus skew constraint with unrealistic value  
-Bus Skew constraint with unrealistic value (< min of half source and destination clock period) or < 1 ns requirement (see constraint position 31 in the Timing Constraint window in Vivado IDE). Setting a very aggressive value results in increased runtime. First endpoint covered by the constraint: u_cpu/u_control_unit/px_read_data_r_reg[0]/D
 Related violations: <none>
 
 TIMING-39#1 Warning
