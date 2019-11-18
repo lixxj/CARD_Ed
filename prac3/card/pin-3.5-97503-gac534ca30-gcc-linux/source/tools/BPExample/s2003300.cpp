@@ -29,16 +29,6 @@ public:
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {} //nothing to do here: always taken branch predictor does not have history
 };
 
-class LocalBranchPredictor : public BranchPredictorInterface {
-public:
-	virtual bool getPrediction(ADDRINT branchIP) {
-	
-	}
- 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {
- 	
-	}
-}
-
 //---------------------------------------------------------------------
 //##############################################
 /*
