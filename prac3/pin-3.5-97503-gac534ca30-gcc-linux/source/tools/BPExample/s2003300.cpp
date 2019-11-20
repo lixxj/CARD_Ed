@@ -29,32 +29,58 @@ public:
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) {} //nothing to do here: always taken branch predictor does not have history
 };
 
-//---------------------------------------------------------------------
 //##############################################
 /*
- * Your changes here.
- *
- * Put your branch predictor implementation here
- *
- * For example:
- * class LocalBranchPredictor : public BranchPredictorInterface {
- *
- * ***put private members for Local branch predictor here
- *
- * public:
- *	 virtual bool getPrediction(ADDRINT branchIP) {
- *		 ***put your implementation here
- *	 }
- *	 virtual void train(ADDRINT branchIP, bool correctBranchDirection) {
- *	   ***put your implementation here
- *	 }
- * }
- *
- * You also need to create an object of branch predictor class in main().
- * See line 158 for more details
- */
+// Class for Local Branch predictor
+class LocalBranchPredictor : public BranchPredictorInterface 
+{
+// private members for Local Branch predictor
+
+public:
+  virtual bool getPrediction(ADDRINT branchIP) 
+  {
+		
+	}
+	virtual void train(ADDRINT branchIP, bool correctBranchDirection) 
+  {
+
+  }
+};
+
+
+// Class for Gshare Branch predictor
+class GshareBranchPredictor : public BranchPredictorInterface 
+{
+// private members for Gshare Branch predictor
+
+public:
+  virtual bool getPrediction(ADDRINT branchIP) 
+  {
+		
+	}
+	virtual void train(ADDRINT branchIP, bool correctBranchDirection) 
+  {
+
+  }
+};
+
+// Class for Tournament Branch predictor
+class TournamentBranchPredictor : public BranchPredictorInterface 
+{
+// private members for Tournament Branch predictor
+
+public:
+  virtual bool getPrediction(ADDRINT branchIP) 
+  {
+		
+	}
+	virtual void train(ADDRINT branchIP, bool correctBranchDirection) 
+  {
+
+  }
+};
+*/ 
 //##############################################
-//---------------------------------------------------------------------
 
 ofstream OutFile;
 BranchPredictorInterface *branchPredictor;
@@ -87,8 +113,6 @@ VOID docount() {
     PIN_Detach();
   }
 }
-
-
 
 VOID TerminateSimulationHandler(VOID *v) {
   OutFile.setf(ios::showbase);
