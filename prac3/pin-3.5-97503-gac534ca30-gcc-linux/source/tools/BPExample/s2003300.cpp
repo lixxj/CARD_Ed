@@ -30,13 +30,100 @@ public:
 };
 
 //##############################################
-/*
+
+// saturating 2-bit counter
+static int hysteresis (int predict, bool correct)
+{
+  int train = 3;
+
+  if (correct)
+  {
+    switch (predict) 
+    {
+      case 0: 
+      {  
+        train = 1;
+        break;
+      }
+      case 1: 
+      {  
+        train = 2;
+        break;
+      }
+      case 2: 
+      {  
+        train = 3;
+        break;
+      }
+      case 3: 
+      {  
+        train = 3;
+        break;
+      }
+      default: break; // default PHT entrie value is “11” (i.e. 3)
+    }
+  } else // !correct
+  {
+    switch (predict) 
+    {
+      case 0: 
+      {  
+        train = 0;
+        break;
+      }
+      case 1: 
+      {  
+        train = 0;
+        break;
+      }
+      case 2: 
+      {  
+        train = 1;
+        break;
+      }
+      case 3: 
+      {  
+        train = 2;
+        break;
+      }
+      default: break; // default PHT entrie value is “11” (i.e. 3)
+    }
+
+  return train;
+}
+
 // Class for Local Branch predictor
 class LocalBranchPredictor : public BranchPredictorInterface 
 {
-// private members for Local Branch predictor
-
 public:
+  LocalBranchPredictor(UINT64 numberOfEntries) 
+  { 
+    int PHT[numberOfEntries];
+    std::fill(PHT, PHT + numberOfEntries, 3); // Initialize all PHT entries to “11” (i.e. 3)
+    int LHRSize = 12; // Initialized to maximum possible size
+    switch(numberOfEntries) 
+    {
+      case 128: 
+      {  
+        LHRSize = 7;
+        break;
+      }
+      case 1024: 
+      {  
+        LHRSize = 10;
+        break;
+      }
+      case 4096: 
+      {  
+        //LHRSize = 12; // maximum possible size, default
+        break;
+      }
+      default: break; // keep default size of 12
+    }
+    bool LHR[128][LHRSize];
+    std::fill(&LHR[0][0], &LHR[0][0] + sizeof(LHR) , 0); // 
+  };
+
   virtual bool getPrediction(ADDRINT branchIP) 
   {
 		
@@ -47,7 +134,7 @@ public:
   }
 };
 
-
+/*
 // Class for Gshare Branch predictor
 class GshareBranchPredictor : public BranchPredictorInterface 
 {
