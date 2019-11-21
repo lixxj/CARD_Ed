@@ -95,12 +95,16 @@ static int hysteresis (int predict, bool correct)
 // Class for Local Branch predictor
 class LocalBranchPredictor : public BranchPredictorInterface 
 {
+private:
+  int LHRSize = 12; 
+  int LHR[128];
+  int PHT[4096]; // maximum possible size, default
+
 public:
+  
   LocalBranchPredictor(UINT64 numberOfEntries) 
   { 
-    int PHT[numberOfEntries];
-    std::fill(PHT, PHT + numberOfEntries, 3); // Initialize all PHT entries to “11” (i.e. 3)
-    int LHRSize = 12; // Initialized to maximum possible size
+    std::fill(&LHR, &LHR + sizeof(LHR) , 0); // Initialize all LHRs to 0
     switch(numberOfEntries) 
     {
       case 128: 
@@ -120,18 +124,26 @@ public:
       }
       default: break; // keep default size of 12
     }
-    bool LHR[128][LHRSize];
-    std::fill(&LHR[0][0], &LHR[0][0] + sizeof(LHR) , 0); // 
+    
   };
-
-  virtual bool getPrediction(ADDRINT branchIP) 
-  {
-		
+  
+  virtual bool getPrediction(ADDRINT branchIP) // branchIP is a 64-bit value
+  {    
+    std::fill(PHT, PHT + sizeof(PHT), 3); // Initialize all PHT entries to “11” (i.e. 3)
+    int LSBs = (branchIP & 0b1111111);
+    if (LSBs > 127)
+    {
+      LSBs = 127;
+    }
+    //LHR[LSBs]
+    
 	}
+
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) 
   {
 
   }
+
 };
 
 /*
