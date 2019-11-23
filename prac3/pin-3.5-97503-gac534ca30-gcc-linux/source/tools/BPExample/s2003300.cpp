@@ -124,42 +124,119 @@ public:
       }
       default: break; // keep default size of 12
     }
-    
+    std::fill(PHT, PHT + sizeof(PHT), 3); // Initialize all PHT entries to “11” (i.e. 3)
   };
   
   virtual bool getPrediction(ADDRINT branchIP) // branchIP is a 64-bit value
   {    
-    std::fill(PHT, PHT + sizeof(PHT), 3); // Initialize all PHT entries to “11” (i.e. 3)
     int LSBs = (branchIP & 0b1111111);
     if (LSBs > 127)
     {
       LSBs = 127;
     }
-    //LHR[LSBs]
-    
+    int PHTindex = LHR[LSBs];
+    int pre = PHT[PHTindex];
+    bool predict = true;
+    if (pre == 2 || pre == 3)
+    {
+      predict = true;
+    } else if (pre == 0 || pre == 1)
+    {
+      predict = false;
+    }
+    return predict;
 	}
 
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) 
   {
-
+    // strengthen or weaken an used PHT entry
+    bool predict = getPrediction(branchIP);
+    int LSBs = (branchIP & 0b1111111);
+    if (LSBs > 127)
+    {
+      LSBs = 127;
+    }
+    int PHTindex = LHR[LSBs];
+    PHT[PHTindex] = hysteresis (predict, correctBranchDirection);
+    
+    // Update LHR
+    LHR[LSBs] = (LHR[LSBs] << 1);
+    LHR[LSBs] = (LHR[LSBs] | predict);
   }
 
 };
 
-/*
 // Class for Gshare Branch predictor
 class GshareBranchPredictor : public BranchPredictorInterface 
 {
 // private members for Gshare Branch predictor
+private:
+  int LHRSize = 12; 
+  int LHR[128];
+  int PHT[4096]; // maximum possible size, default
 
 public:
-  virtual bool getPrediction(ADDRINT branchIP) 
-  {
-		
+  
+  LocalBranchPredictor(UINT64 numberOfEntries) 
+  { 
+    std::fill(&LHR, &LHR + sizeof(LHR) , 0); // Initialize all LHRs to 0
+    switch(numberOfEntries) 
+    {
+      case 128: 
+      {  
+        LHRSize = 7;
+        break;
+      }
+      case 1024: 
+      {  
+        LHRSize = 10;
+        break;
+      }
+      case 4096: 
+      {  
+        //LHRSize = 12; // maximum possible size, default
+        break;
+      }
+      default: break; // keep default size of 12
+    }
+    std::fill(PHT, PHT + sizeof(PHT), 3); // Initialize all PHT entries to “11” (i.e. 3)
+  };
+  
+  virtual bool getPrediction(ADDRINT branchIP) // branchIP is a 64-bit value
+  {    
+    int LSBs = (branchIP & 0b1111111);
+    if (LSBs > 127)
+    {
+      LSBs = 127;
+    }
+    int PHTindex = LHR[LSBs];
+    int pre = PHT[PHTindex];
+    bool predict = true;
+    if (pre == 2 || pre == 3)
+    {
+      predict = true;
+    } else if (pre == 0 || pre == 1)
+    {
+      predict = false;
+    }
+    return predict;
 	}
+
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) 
   {
-
+    // strengthen or weaken an used PHT entry
+    bool predict = getPrediction(branchIP);
+    int LSBs = (branchIP & 0b1111111);
+    if (LSBs > 127)
+    {
+      LSBs = 127;
+    }
+    int PHTindex = LHR[LSBs];
+    PHT[PHTindex] = hysteresis (predict, correctBranchDirection);
+    
+    // Update LHR
+    LHR[LSBs] = (LHR[LSBs] << 1);
+    LHR[LSBs] = (LHR[LSBs] | predict);
   }
 };
 
@@ -167,18 +244,76 @@ public:
 class TournamentBranchPredictor : public BranchPredictorInterface 
 {
 // private members for Tournament Branch predictor
+private:
+  int LHRSize = 12; 
+  int LHR[128];
+  int PHT[4096]; // maximum possible size, default
 
 public:
-  virtual bool getPrediction(ADDRINT branchIP) 
-  {
-		
+  
+  LocalBranchPredictor(UINT64 numberOfEntries) 
+  { 
+    std::fill(&LHR, &LHR + sizeof(LHR) , 0); // Initialize all LHRs to 0
+    switch(numberOfEntries) 
+    {
+      case 128: 
+      {  
+        LHRSize = 7;
+        break;
+      }
+      case 1024: 
+      {  
+        LHRSize = 10;
+        break;
+      }
+      case 4096: 
+      {  
+        //LHRSize = 12; // maximum possible size, default
+        break;
+      }
+      default: break; // keep default size of 12
+    }
+    std::fill(PHT, PHT + sizeof(PHT), 3); // Initialize all PHT entries to “11” (i.e. 3)
+  };
+  
+  virtual bool getPrediction(ADDRINT branchIP) // branchIP is a 64-bit value
+  {    
+    int LSBs = (branchIP & 0b1111111);
+    if (LSBs > 127)
+    {
+      LSBs = 127;
+    }
+    int PHTindex = LHR[LSBs];
+    int pre = PHT[PHTindex];
+    bool predict = true;
+    if (pre == 2 || pre == 3)
+    {
+      predict = true;
+    } else if (pre == 0 || pre == 1)
+    {
+      predict = false;
+    }
+    return predict;
 	}
+
 	virtual void train(ADDRINT branchIP, bool correctBranchDirection) 
   {
-
+    // strengthen or weaken an used PHT entry
+    bool predict = getPrediction(branchIP);
+    int LSBs = (branchIP & 0b1111111);
+    if (LSBs > 127)
+    {
+      LSBs = 127;
+    }
+    int PHTindex = LHR[LSBs];
+    PHT[PHTindex] = hysteresis (predict, correctBranchDirection);
+    
+    // Update LHR
+    LHR[LSBs] = (LHR[LSBs] << 1);
+    LHR[LSBs] = (LHR[LSBs] | predict);
   }
 };
-*/ 
+
 //##############################################
 
 ofstream OutFile;
@@ -306,17 +441,17 @@ int main(int argc, char * argv[]) {
   else if (KnobBranchPredictorType.Value() == "local") {
   	 std::cerr << "Using Local BP." << std::endl;
 /* Uncomment when you implemented Local branch predictor */
-//    branchPredictor = new LocalBranchPredictor(KnobNumberOfEntriesInBranchPredictor.Value());
+    branchPredictor = new LocalBranchPredictor(KnobNumberOfEntriesInBranchPredictor.Value());
   }
   else if (KnobBranchPredictorType.Value() == "gshare") {
   	 std::cerr << "Using Gshare BP."<< std::endl;
 /* Uncomment when you implemented Gshare branch predictor */
-//    branchPredictor = new GshareBranchPredictor(KnobNumberOfEntriesInBranchPredictor.Value());
+    branchPredictor = new GshareBranchPredictor(KnobNumberOfEntriesInBranchPredictor.Value());
   }
   else if (KnobBranchPredictorType.Value() == "tournament") {
   	 std::cerr << "Using Tournament BP." << std::endl;
 /* Uncomment when you implemented tournament branch predictor */
-//    branchPredictor = new TournamentBranchPredictor(KnobNumberOfEntriesInBranchPredictor.Value());
+    branchPredictor = new TournamentBranchPredictor(KnobNumberOfEntriesInBranchPredictor.Value());
   }
   else {
     std::cerr << "Error: No such type of branch predictor. Simulation will be terminated." << std::endl;
